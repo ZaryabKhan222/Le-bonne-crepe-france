@@ -1,0 +1,195 @@
+{
+  "photos": {
+    "crepe-duo-marble": {
+      "src": "/assets/food/crepe-duo-marble.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "crepes",
+      "alt": "Two fresh crêpes on a marble table, one topped with grated Swiss cheese and one with strawberry jelly and whipped cream",
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOgA+43QcHAMA4m5wQAAP0eC1ExLGNgJ5JghtbVFDWOBhaKShoWb+WCzVb1+8YPy41VkKdPEOdIErSBzJOA2vfJTlJmmCgee58AOAMc6O/mF3/Y2XRoBTWyySgCvkfNoRHBkDQAAA=="
+    },
+    "crepe-duo-portrait": {
+      "src": "/assets/food/crepe-duo-portrait.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "crepes",
+      "alt": "Ham and cheese crêpe beside a strawberry jelly crêpe with whipped cream, served in gingham trays",
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYgCsACPgVh9jnsniMs9V5LgAAP53MVdx2yuRO0T5jod6KiNVeAtDjOCbFBnvNA654cCX098ISqJ4Ps3aZGzWb688PkktFUg3f0VV80LQnQjqzzckveTsHA2Iq8dwmru830AA"
+    },
+    "crepe-cheese-roll": {
+      "src": "/assets/food/crepe-cheese-roll.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "crepes",
+      "alt": "Golden rolled crêpe with melted cheese and fresh parsley on a white plate",
+      "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADQAwCdASoQABUAPu1iqU2ppaQiMAgBMB2JZgC/OCHc74S+6ZDlOTAA/rSURjxQE/p92w5Pxi0FStykAURggDuF12DXE7nuA6Fbx6gn28HOkaGH2NYzWUl+M94xZ6ZDhKgAAA=="
+    },
+    "crepe-duo-angle": {
+      "src": "/assets/food/crepe-duo-angle.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "crepes",
+      "alt": "Savory cheese crêpe and sweet strawberry crêpe side by side on marble",
+      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOmUABQ8pfqHSDTUSi7gAD+BPrKFrITET2G6k17St8srf/F99tF9J20OQwf20HxxVHnqL5u5H2OuA9JS6K58MYi4AIT6gu8OUHk4rKU/mnqNV9PKzlKVSMhoSC+jZeiiuAQWwbf8Gb9bF0poeu2dnwe7D8RqTabzhAA"
+    },
+    "crepe-ham-cheese-cut": {
+      "src": "/assets/food/crepe-ham-cheese-cut.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "crepes",
+      "alt": "Ham and Swiss cheese crêpe cut open to show the melted filling, garnished with parsley",
+      "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACwAwCdASoQABUAPu1kqU4ppaOiMAgBMB2JZAAAUhO+XAkSHriiOAD4oF4pjPypkoFfz0vJKGXjScXmfu9SpmY/D1UYrW9ZuOu/X5JPEMVP64CwsMJsP0dUP4uMbQVHcywY0YAA"
+    },
+    "crepe-duo-table": {
+      "src": "/assets/food/crepe-duo-table.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "crepes",
+      "alt": "Toasted cheese crêpe and strawberry crêpe in checkered paper trays on a marble table",
+      "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOmUABiANGKDOs5EtXYAP0f+zutzfLe7lC56NQNjIC73LMF18fWsR9KxKephCey3filPxA9kPJHBENQvvo+gg7DRAtnBQdGAaGxHrNZAEJTGvUPEZ+elrvMrF0mnkNTMN3apUfY+rAA"
+    },
+    "crepe-duo-soft": {
+      "src": "/assets/food/crepe-duo-soft.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "crepes",
+      "alt": "Pair of fresh crêpes, one savory with grated cheese and one sweet with strawberry glaze",
+      "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JYwCw7BM2AByjvU0AAP2aCP+TgcjO4Mc3THlAZi1tnXjVb/EKv31043myHFmFBksQmWJttHd2XO3GvNJmjpnwHhj3fsnLpFlqGhFjQxJdBo0b+8/FtWanTBH3uXms5WSs0Y7NJoqKLkrJoAA="
+    },
+    "crepe-golden-roll": {
+      "src": "/assets/food/crepe-golden-roll.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "crepes",
+      "alt": "Perfectly rolled golden crêpe with a sprig of parsley on a white plate",
+      "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACwAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JQAAJC4FXCi3joq1VwADeNN61fUrFLuF3IUE4JVsehDe78CZg9yJORhk0De9Lc8jtBk0eaM7p+rd2f4bUcN2cf/7SUw0rp0VDFD8cJOpW9UicAAA="
+    },
+    "waffle-salmon-top": {
+      "src": "/assets/food/waffle-salmon-top.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "waffles",
+      "alt": "Belgian waffle topped with smoked salmon roses, avocado cream, and lime zest on a white plate",
+      "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAAAQBACdASoQABUAPu1iqU2ppaQiMAgBMB2JQBOgBEBRg1a8B/fCs8FAoAD+wzEb0FuFxGb+JKBjRTic14R55DOnZ4irW4rQPi9hHx2WJAAAAA=="
+    },
+    "waffle-salmon-close": {
+      "src": "/assets/food/waffle-salmon-close.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "waffles",
+      "alt": "Close-up of a savory waffle with smoked salmon, guacamole, and fresh parsley",
+      "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAABwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbACdMoADYJ/kqS/ncTPNeRm41AD+03xLqCZ3IRoSrWWFnC+eX7U9lb0gnJwSu/MN4EVQEe6szNvzaGNGQZ8ANFDv9JwIRTxFrAz/rtZ3dD4OIFs5KTNfrlq6hv3MnFM19gAA"
+    },
+    "waffle-strawberry-cream": {
+      "src": "/assets/food/waffle-strawberry-cream.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "waffles",
+      "alt": "Waffle layered with sliced strawberries, vanilla pastry cream, and blueberry coulis",
+      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAACQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbAC7MoAlphdn/yGjbbZBjfpIwhgA/sNY+9mKgzZUiOYud643AtXwkeMHjZWre3jwi0JLaGQnzRw8JOeVYb3zKgur+ylQxLekTxF+qX97/+8sxsjPkEm9Vj1NEVs3khfCFnu/2X3anzO5mS6tJgUNWwKFcD1mcevAAAAA"
+    },
+    "waffle-strawberry-top": {
+      "src": "/assets/food/waffle-strawberry-top.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "waffles",
+      "alt": "Artfully plated strawberry waffle with berry coulis dots, seen from above",
+      "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JYwCo9CFwmlMYCSkEJO3AAP5VpC05JZJIKStj3fQ5/hEWjrhs6I2lR+vQmbSF/0vdmhO9oBsyf23Jo5+KhASmznr7mbOHS+P4AA=="
+    },
+    "waffle-strawberry-angle": {
+      "src": "/assets/food/waffle-strawberry-angle.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "waffles",
+      "alt": "Strawberry waffle with piped vanilla cream and dark berry coulis on a white plate",
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOgO4FwEpy3upxjGmm7U6Uj8AD+VGZ54cp1QiyDJqMAgXcMLFzeGm0pyQN5R2xaIZ3hB1ZRYowEHb3W7NqPuC2Or8eZWjAdkEyRggHiV4bpOvmiL+3aCQjjlm6hSq+Z90gtgFilQF8YyLvPAAAA"
+    },
+    "waffle-salmon-avocado": {
+      "src": "/assets/food/waffle-salmon-avocado.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "waffles",
+      "alt": "Savory waffle crowned with smoked salmon, avocado mousse, and pickled onion",
+      "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAABwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYgC7L1yB0bENuFhOT7m09tyR4AD+w1JWgv8vYfyuELIWIzTxZ/18KpzcbalIEPGhAv1ZlCx+je6k0ocbJEqnMHpUCzJ8LmqgQaJg9VDWrv0meu+HyAAA"
+    },
+    "matcha-berry-latte": {
+      "src": "/assets/food/matcha-berry-latte.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "drinks",
+      "alt": "Iced matcha latte with berry swirls and whipped cream topped with flower petals, in a La Bonne Crêpe compostable cup",
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYgCdMoAB3MX37lggkRv1s0eAAM4KNFZFUVw2kiTjYdckyWrRHZ21VHdl3rQjMMPEjL+fuMveIWzqQ+rt39L0eh7R43TXBQOG4dOF2zxEfgK/XlJ26Oyy2WE+jA+YUcy9yJ8AAAA="
+    },
+    "matcha-drink-cart": {
+      "src": "/assets/food/matcha-drink-cart.webp",
+      "width": 1600,
+      "height": 1067,
+      "category": "drinks",
+      "alt": "Strawberry matcha creation with whipped cream and a biscuit, on the Gourmet Cart counter under its neon sign",
+      "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAQCdASoQAAsAA4BaJbACdACeHrsurAAA/CL3yOWuvNCe8A0zY7ZpcWkvWbq6RgJoqJCFghw9yTkVxiB1NkhPmNeUclRION1cVxFlEUuNYnFq65YKuivSbIBxE7Bxl7H5seodknkAAA=="
+    },
+    "cart-counter": {
+      "src": "/assets/food/cart-counter.webp",
+      "width": 1600,
+      "height": 2133,
+      "category": "behind",
+      "alt": "The Gourmet Cart counter with house-made syrups, organic protein, and glowing neon signs among Miami palms",
+      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYgC7AdwAt+ISbNqunUbVgAD+wHiuZQYmxlRpfP0YB/zJcW5maSjtnT+/ybnuM1RZBTRvll6DZzGLU62JGmW6ImXTbnXUVzk2jF/CEA0ekulEw9buPo+PXNw7BSplHjvvm+cQh1BuDTwnG6ojZ5S5kI0kIqkAAAA="
+    },
+    "romain-sauce": {
+      "src": "/assets/food/romain-sauce.webp",
+      "width": 1600,
+      "height": 2399,
+      "category": "behind",
+      "alt": "Romain Courcier preparing a drink beside a fresh crêpe on the griddle at a Miami farmers market",
+      "blurDataURL": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JaAC06YuGyYcfJ/RZyXrbwFAA/uuWWsWGAcDa76MkOz+4+S/cs3TOhRkHz94UBEATWHBU9FD5r7GMuaw9hQ5BkOo9cxToPzFFd/r763d5qSjZZGvN4OxeJQYLfAOmKaL2zAb50WRkShMfzKLSF282BHhFxpH8Pja0l+I8pH2rLPEacqD7Zc+7HdcWAsYzIjrhr3cLFcNZI/CiRLpqgJZc1rdowELAAAA="
+    },
+    "romain-pour": {
+      "src": "/assets/food/romain-pour.webp",
+      "width": 1600,
+      "height": 2399,
+      "category": "behind",
+      "alt": "Romain pouring caramel sauce while a thin crêpe cooks on the cast iron griddle",
+      "blurDataURL": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAACQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JbACo9dwLf/VkbyQGdWNqJG13haQA/tfPgJP7b49YXKi3ZgWxHnNvqQU1yE20amUW+4l0X+/ccgEDtS9JOYOidS8JqBJ6TbqQBJ0IJEyD51laAZAcLnJPHj+LU1gLPROjtgUA0Kdz+7/RZOO1o5+S4PPP9HC/xHeh4+A9+XDxL5g9fOwQcWgetdZbqAvskwdpk3oMuUHV9+DhgAA="
+    },
+    "romain-flip": {
+      "src": "/assets/food/romain-flip.webp",
+      "width": 1600,
+      "height": 2399,
+      "category": "behind",
+      "alt": "Romain Courcier turning a golden crêpe by hand on the griddle of his market cart",
+      "blurDataURL": "data:image/webp;base64,UklGRrwAAABXRUJQVlA4ILAAAAAwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZACsBAgOVQTHQotjdv7IZQAA/tcxhfiszRiy8yKdffNCZNoetiXPSOp9EpAcdZyzUwH8wqXx8l1L6OIORjGBZlCukSt0BnSUpC84igksGyeQko67Mpzsxquwlchv5NsiB64CVXPm45k9x7VdBSBu7eNWog//j70u6vFXkpPxTPAg0ahS2dPIS6c1OJ1bKZLbEBVchgAAAA=="
+    }
+  },
+  "logos": {
+    "logo-gold": {
+      "src": "/assets/logos/logo-gold.webp",
+      "width": 800,
+      "height": 800
+    },
+    "logo-neon": {
+      "src": "/assets/logos/logo-neon.webp",
+      "width": 800,
+      "height": 800
+    },
+    "logo-classic": {
+      "src": "/assets/logos/logo-classic.webp",
+      "width": 800,
+      "height": 1035
+    }
+  },
+  "hero": {
+    "hero-desktop": {
+      "src": "/assets/hero/hero-desktop.webp",
+      "width": 2400,
+      "height": 1350,
+      "blurDataURL": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAADwAQCdASoQAAkAA4BaJYgCdADMmRUfNwAA/tDlSbC1bRYtUJwucb5EbL1SUZyUSf2uylef06wdpArPH+vgBYpucx62jpt4BuQuyEC7AAA="
+    },
+    "hero-mobile": {
+      "src": "/assets/hero/hero-mobile.webp",
+      "width": 1080,
+      "height": 1620,
+      "blurDataURL": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZgC06Yv+lga+RDumSEYrhAD+ltxbiXb3hwvyS9J1GODO7T3+GzRdfm0CQohGJZ1KuqX2dcei+LG/z2kooY9AxoGPGEpelaDuX9t/l2YHvcMBU4mAyjtY32WlaA3yIbLKpYwwRArBE/BCVvRxJW6/DWgRiAgPm847QW9m2B8JbiwxEzk876rsQNIFy0sKqdQswAAA"
+    }
+  }
+}
