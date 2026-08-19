@@ -21,7 +21,8 @@ export const site = {
   whatsappHref: "https://wa.me/13052191917",
   email: "", // shown nowhere until provided
   areaServed: "Miami, FL",
-  url: "https://labonnecrepedefrance.com", // TODO(client): set the final production domain
+  // TODO(client): change to the custom domain when one is purchased.
+  url: "https://la-bonne-crepe-france.vercel.app",
   socials: {
     instagram: "https://www.instagram.com/la_bonne_crepe_de_france/",
     facebook: "https://www.facebook.com/p/La-bonne-cr%C3%AApe-de-France-LLC-61573089262420/",
