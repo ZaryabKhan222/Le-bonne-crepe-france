@@ -127,6 +127,67 @@ body {
   }
 }
 
+/* Hero entrance: pure CSS so it plays as soon as HTML paints, long before
+   React hydrates. Stays visible if JS never arrives. */
+.hero-rise {
+  opacity: 0;
+  transform: translateY(26px);
+  animation: heroRise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-rise-1 { animation-delay: 0.1s; }
+.hero-rise-2 { animation-delay: 0.25s; }
+.hero-rise-3 { animation-delay: 0.4s; }
+.hero-rise-4 { animation-delay: 0.55s; }
+
+@keyframes heroRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-cue {
+  opacity: 0;
+  animation: cueFade 1s ease-out 1.4s forwards;
+}
+
+.scroll-cue-line {
+  transform-origin: top;
+  animation: cuePulse 2.2s ease-in-out infinite;
+}
+
+@keyframes cueFade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cuePulse {
+  0%,
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleY(0.55);
+    opacity: 0.5;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-rise,
+  .scroll-cue {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .scroll-cue-line {
+    animation: none;
+  }
+}
+
 /* CSS-only shimmer used by the hero fallback when 3D is disabled. */
 .hero-shimmer {
   background: linear-gradient(

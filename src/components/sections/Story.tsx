@@ -20,9 +20,9 @@ export default function Story() {
       // Slow parallax on the portrait as the section scrolls through.
       gsap.fromTo(
         ".story-portrait img",
-        { yPercent: -6 },
+        { yPercent: -4 },
         {
-          yPercent: 6,
+          yPercent: 4,
           ease: "none",
           scrollTrigger: {
             trigger: ".story-portrait",
@@ -54,7 +54,7 @@ export default function Story() {
               sizes="(max-width: 768px) 92vw, 44vw"
               placeholder="blur"
               blurDataURL={portrait.blurDataURL}
-              className="scale-[1.14] object-cover"
+              className="scale-[1.08] object-cover object-[50%_18%]"
             />
           </div>
           {/* Small overlapping detail shot, like a photo laid on a table */}
