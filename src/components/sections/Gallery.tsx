@@ -12,6 +12,7 @@ const filters = [
   { id: "all", label: "All" },
   { id: "crepes", label: "Crêpes" },
   { id: "waffles", label: "Waffles" },
+  { id: "desserts", label: "Desserts" },
   { id: "drinks", label: "Drinks" },
   { id: "behind", label: "Behind the Scenes" },
 ] as const;

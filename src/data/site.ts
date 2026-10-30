@@ -14,7 +14,7 @@ export const site = {
   legalName: "La Bonne Crêpe de France LLC",
   tagline: "Healthy French Specialities and Natural Drinks",
   description:
-    "Healthy French Specialities and Natural Drinks. The first real recovery lounge in Miami: fresh crêpes, waffles, salads, gourmet coffee and cold press juices at farmers markets and private events.",
+    "Healthy French Specialities and Natural Drinks. The first real recovery lounge in Miami: breakfast combos, waffles, toasted croissants, fresh salads, French cheese boards, handcrafted desserts, gourmet coffee and cold press juices, at our Miami restaurant and private events.",
   // TODO(client): confirm the public phone number before launch (from the menu header).
   phone: "305 219 1917",
   phoneHref: "tel:+13052191917",

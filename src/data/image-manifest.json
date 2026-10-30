@@ -128,6 +128,38 @@
       "alt": "Strawberry matcha creation with whipped cream and a biscuit, on the Gourmet Cart counter under its neon sign",
       "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAQCdASoQAAsAA4BaJbACdACeHrsurAAA/CL3yOWuvNCe8A0zY7ZpcWkvWbq6RgJoqJCFghw9yTkVxiB1NkhPmNeUclRION1cVxFlEUuNYnFq65YKuivSbIBxE7Bxl7H5seodknkAAA=="
     },
+    "drink-caramel-latte-can": {
+      "src": "/assets/food/drink-caramel-latte-can.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "drinks",
+      "alt": "Iced caramel latte with a thick caramel swirl and milk foam, served in a sealed clear can on a silver tray",
+      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbACsABm1fEbgo85Ylvw4yAAA/qobE//EyIUzu5VeudniV37O7xwPKvn4brw4JKak8YeIvBYNyEm3f5PBlDsqn44anh3YL9UPGXUtORexpvyZTl6m9OLCx/+zgEGWyT9kUrPTkXXBbSMnRG72h8f9y/OnNDN9q3F91236Wa4r6HQ/KHL2wQuWFgAAAA=="
+    },
+    "dessert-chocolate-mousse": {
+      "src": "/assets/food/dessert-chocolate-mousse.webp",
+      "width": 1439,
+      "height": 1920,
+      "category": "desserts",
+      "alt": "Handcrafted chocolate mousse in a fluted glass with chocolate drizzle and fresh mint",
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbACdAYwce1+3QtANOIijEAD+hvfBBMa3cK3gVJEcFrCFzMbvr0SVxU5eA8ZT2SPqxCBpXg4uQ6G9nlZUs8NSFGrHWk5QB34iWdKQthn/LDoqyBdwJdAd5pDeNaqrFLrKaI4/+XtTyKL1Q6Fpoj9V0ZWgAA=="
+    },
+    "dessert-caramel-flan": {
+      "src": "/assets/food/dessert-caramel-flan.webp",
+      "width": 1440,
+      "height": 1818,
+      "category": "desserts",
+      "alt": "Caramel flan in a pool of golden caramel sauce, topped with whipped cream",
+      "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACsAYxE3KeIkEzx4RRHOG3IAP48btDoQZLe18bSdDX+W9eItP7qIC0aG0vkbmBWA5XqPwXqJ9KkY2RU9FJGc7beCMJJJo3JkqUgRLiSDsHtBTR6U9/EFFM5ilO2SwcDALN7iL9w5MZoY3fOufC1MWu8qe5hW18eakj2x5StdxXfCRL6AAAA"
+    },
+    "dessert-apple-crumble": {
+      "src": "/assets/food/dessert-apple-crumble.webp",
+      "width": 1306,
+      "height": 1920,
+      "category": "desserts",
+      "alt": "Golden apple crumble baked in a white ramekin, garnished with fresh mint",
+      "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JbACsHYAIMMYKjrwdsEUgSQQkwAD9SZNMngThZzcBynXvQrU7vpuyCOc9Db1kOhmNChDPi1JGAmF4RcjQgE1gF4mIBEifQjDZlRnBJOgiYu+N5juLnc2QV/VzIZdwcu7236Umfe+3084gygJV2rPJFzt1z40DJICWuml6hmmpv2OSvImkHnZ4Ky2H+6QAAAA="
+    },
     "cart-counter": {
       "src": "/assets/food/cart-counter.webp",
       "width": 1600,
@@ -190,6 +222,14 @@
       "width": 1080,
       "height": 1620,
       "blurDataURL": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAAAQBACdASoQABgAPu1iqU2ppaOiMAgBMB2JZgC06Yv+lga+RDumSEYrhAD+ltxbiXb3hwvyS9J1GODO7T3+GzRdfm0CQohGJZ1KuqX2dcei+LG/z2kooY9AxoGPGEpelaDuX9t/l2YHvcMBU4mAyjtY32WlaA3yIbLKpYwwRArBE/BCVvRxJW6/DWgRiAgPm847QW9m2B8JbiwxEzk876rsQNIFy0sKqdQswAAA"
+    }
+  },
+  "menu": {
+    "food-menu": {
+      "src": "/assets/menu/food-menu.webp",
+      "width": 1536,
+      "height": 1024,
+      "blurDataURL": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAQCdASoQAAsAA4BaJQBOgB3gM/fPMAD+7iRdQO+Ke9pOO7PLrpvXH8WAKTscsZa1Yj+0xGU9F7A2z3rRfEKG7AAAAA=="
     }
   }
 }

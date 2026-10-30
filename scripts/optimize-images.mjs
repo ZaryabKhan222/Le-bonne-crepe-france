@@ -34,6 +34,11 @@ const PHOTOS = [
   // Drinks
   { id: "matcha-berry-latte", file: "food images/37da8a2b-a6ee-4c2e-942e-13c07db82d0d.jpeg", category: "drinks", alt: "Iced matcha latte with berry swirls and whipped cream topped with flower petals, in a La Bonne Crêpe compostable cup" },
   { id: "matcha-drink-cart", file: "RALV2863.jpg", category: "drinks", alt: "Strawberry matcha creation with whipped cream and a biscuit, on the Gourmet Cart counter under its neon sign" },
+  { id: "drink-caramel-latte-can", file: "new photos/caramel-latte-can.jpeg", category: "drinks", alt: "Iced caramel latte with a thick caramel swirl and milk foam, served in a sealed clear can on a silver tray" },
+  // Desserts
+  { id: "dessert-chocolate-mousse", file: "new photos/chocolate-mousse.jpeg", category: "desserts", alt: "Handcrafted chocolate mousse in a fluted glass with chocolate drizzle and fresh mint" },
+  { id: "dessert-caramel-flan", file: "new photos/caramel-flan.jpeg", category: "desserts", alt: "Caramel flan in a pool of golden caramel sauce, topped with whipped cream" },
+  { id: "dessert-apple-crumble", file: "new photos/apple-crumble.jpeg", category: "desserts", alt: "Golden apple crumble baked in a white ramekin, garnished with fresh mint" },
   // Behind the scenes
   { id: "cart-counter", file: "food images/8f0973e3-c89d-43de-a972-75ac092836fd.jpeg", category: "behind", alt: "The Gourmet Cart counter with house-made syrups, organic protein, and glowing neon signs among Miami palms" },
   { id: "romain-sauce", file: "RALV2246.jpg", category: "behind", alt: "Romain Courcier preparing a drink beside a fresh crêpe on the griddle at a Miami farmers market" },
@@ -42,7 +47,7 @@ const PHOTOS = [
 ];
 
 async function ensureDirs() {
-  for (const d of ["food", "logos", "hero", "og"]) {
+  for (const d of ["food", "logos", "hero", "og", "menu"]) {
     await mkdir(path.join(OUT, d), { recursive: true });
   }
 }
@@ -161,13 +166,29 @@ async function processHero() {
   return manifest;
 }
 
+/** Printed food menu, shown in the menu section (the table QR codes open /#menu). */
+async function processMenu() {
+  const input = path.join(SRC, "food-menu.jpeg");
+  const outFile = path.join(OUT, "menu", "food-menu.webp");
+  // Full resolution and high quality: the menu text has to stay legible.
+  const info = await sharp(input).rotate().webp({ quality: 90 }).toFile(outFile);
+  console.log(`menu food-menu: ${info.width}x${info.height} ${(info.size / 1024).toFixed(0)}kb`);
+  return {
+    "food-menu": {
+      src: "/assets/menu/food-menu.webp", width: info.width, height: info.height,
+      blurDataURL: await blurDataURL(input),
+    },
+  };
+}
+
 async function main() {
   await ensureDirs();
   const photos = await processPhotos();
   const logos = await processLogos();
   const hero = await processHero();
+  const menu = await processMenu();
   await copyFile(path.join(SRC, "MENU FIN  (1).pdf"), path.join(ROOT, "public", "MENU-FIN.pdf"));
-  const manifest = { photos, logos, hero };
+  const manifest = { photos, logos, hero, menu };
   await mkdir(path.join(ROOT, "src", "data"), { recursive: true });
   await writeFile(
     path.join(ROOT, "src", "data", "image-manifest.json"),

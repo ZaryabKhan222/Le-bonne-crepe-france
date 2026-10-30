@@ -1,10 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import Eyebrow from "@/components/ui/Eyebrow";
 import GoldRule from "@/components/ui/GoldRule";
 import Reveal from "@/components/ui/Reveal";
 import Button from "@/components/ui/Button";
 import { menu, type MenuItem } from "@/data/menu";
+import { foodMenuImage } from "@/data/images";
+
+// Hidden categories and items stay in menu.ts but are not shown.
+const visibleMenu = menu
+  .filter((category) => !category.hidden)
+  .map((category) => ({ ...category, items: category.items.filter((item) => !item.hidden) }));
 
 function Price({ price }: { price: MenuItem["price"] }) {
   if (price === null) {
@@ -33,7 +40,7 @@ export default function MenuSection() {
               id="menu-heading"
               className="font-display text-4xl leading-tight font-medium tracking-tight text-charcoal md:text-5xl"
             >
-              From the griddle and the juice press
+              French flavors, fresh ingredients
             </h2>
             <GoldRule className="mt-6 max-w-24" />
           </div>
@@ -47,8 +54,36 @@ export default function MenuSection() {
           </div>
         </div>
 
+        {/* The printed food menu. The table QR codes open /#menu, so this is
+            the first thing a guest sees after scanning. */}
+        <figure className="mb-14">
+          <a
+            href={foodMenuImage.src}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open the food menu full size"
+            className="group block overflow-hidden rounded-lg border border-gold/15 shadow-[0_1px_2px_rgba(26,26,26,0.04)]"
+          >
+            <Image
+              src={foodMenuImage.src}
+              alt="La Bonne Crêpe food menu: combo breakfasts, waffles, toasted croissants, sandwiches and bagels, cheese boards, fresh salads and gourmet desserts, with prices"
+              width={foodMenuImage.width}
+              height={foodMenuImage.height}
+              sizes="(max-width: 1152px) 100vw, 1152px"
+              placeholder="blur"
+              blurDataURL={foodMenuImage.blurDataURL}
+              // Served as is: the default optimizer quality softens the menu text.
+              unoptimized
+              className="w-full transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+            />
+          </a>
+          <figcaption className="mt-3 text-center text-xs text-ink/50">
+            Tap the menu to view it full size.
+          </figcaption>
+        </figure>
+
         <div className="columns-1 gap-8 md:columns-2">
-          {menu.map((category, ci) => (
+          {visibleMenu.map((category, ci) => (
             <Reveal
               key={category.id}
               delay={Math.min(ci * 0.04, 0.2)}

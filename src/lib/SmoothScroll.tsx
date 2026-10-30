@@ -36,8 +36,28 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     };
     document.addEventListener("click", onClick);
 
+    // Deep links like the table QR codes (/#menu): the browser jumps before
+    // fonts and images settle, so line up on the target again once loaded,
+    // unless the visitor has already started scrolling.
+    let userScrolled = false;
+    const markScrolled = () => {
+      userScrolled = true;
+    };
+    const settleOnHash = () => {
+      const el = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      // No extra offset: Lenis already honours the section's scroll-margin.
+      if (el && !userScrolled) lenis.scrollTo(el, { immediate: true });
+    };
+    window.addEventListener("wheel", markScrolled, { once: true, passive: true });
+    window.addEventListener("touchmove", markScrolled, { once: true, passive: true });
+    if (document.readyState === "complete") settleOnHash();
+    else window.addEventListener("load", settleOnHash, { once: true });
+
     return () => {
       document.removeEventListener("click", onClick);
+      window.removeEventListener("wheel", markScrolled);
+      window.removeEventListener("touchmove", markScrolled);
+      window.removeEventListener("load", settleOnHash);
       gsap.ticker.remove(tick);
       lenis.destroy();
     };

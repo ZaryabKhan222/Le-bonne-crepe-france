@@ -95,14 +95,16 @@ export default function Story() {
             <p>
               Each life taught the same lesson: what you put back into the body decides
               what you can ask of it. That is the idea behind La Bonne Crêpe de France,
-              founded with Karen Courcier and now in its third year rolling through
-              Miami&apos;s farmers markets and private events.
+              founded with Karen Courcier. It started at Miami&apos;s farmers markets and
+              private events, and now has a home of its own: a newly opened restaurant
+              in Miami.
             </p>
             <p>
               The Recovery Lounge is where his two worlds meet: French technique and
-              fighter&apos;s discipline. Crêpes made to order from batter mixed each
-              morning, salads and cold press juices built for training days, pastry by
-              a Meilleur Ouvrier de France, and coffee worth slowing down for.
+              fighter&apos;s discipline. Breakfasts that set up the day, waffles and
+              toasted croissants, fresh salads and French cheese boards, handcrafted
+              desserts, cold press juices built for training days, and coffee worth
+              slowing down for.
             </p>
           </div>
 

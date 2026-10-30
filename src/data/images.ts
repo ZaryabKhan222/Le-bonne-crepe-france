@@ -4,7 +4,7 @@ export type Photo = {
   src: string;
   width: number;
   height: number;
-  category: "crepes" | "waffles" | "drinks" | "behind";
+  category: "crepes" | "waffles" | "desserts" | "drinks" | "behind";
   alt: string;
   blurDataURL: string;
 };
@@ -19,6 +19,7 @@ export type SimpleImage = {
 const photos = manifest.photos as Record<string, Photo>;
 const logos = manifest.logos as Record<string, SimpleImage>;
 const hero = manifest.hero as Record<string, Required<SimpleImage>>;
+const menuImages = manifest.menu as Record<string, Required<SimpleImage>>;
 
 export function photo(id: string): Photo {
   const p = photos[id];
@@ -37,3 +38,6 @@ export const logoNeon = logos["logo-neon"];
 export const logoClassic = logos["logo-classic"];
 export const heroDesktop = hero["hero-desktop"];
 export const heroMobile = hero["hero-mobile"];
+
+/** The printed food menu, shown in the menu section. */
+export const foodMenuImage = menuImages["food-menu"];
