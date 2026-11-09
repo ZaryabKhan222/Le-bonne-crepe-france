@@ -27,10 +27,22 @@ export function photo(id: string): Photo {
   return p;
 }
 
+/**
+ * Kept out of the gallery: the story portraits (so they feel special where
+ * they are used) and near-duplicate shots of the same dish, so each plate
+ * shows once.
+ */
+const notInGallery = [
+  "romain-flip",
+  "romain-sauce",
+  "waffle-strawberry-cream",
+  "waffle-strawberry-top",
+  "waffle-salmon-top",
+  "waffle-salmon-avocado",
+];
+
 export const galleryPhotos: (Photo & { id: string })[] = Object.entries(photos)
-  // The gallery shows food, drinks and behind-the-scenes; portraits of the
-  // story section stay out so they feel special where they are used.
-  .filter(([id]) => !["romain-flip", "romain-sauce"].includes(id))
+  .filter(([id]) => !notInGallery.includes(id))
   .map(([id, p]) => ({ id, ...p }));
 
 export const logoGold = logos["logo-gold"];
