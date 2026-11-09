@@ -4,7 +4,7 @@ export type Photo = {
   src: string;
   width: number;
   height: number;
-  category: "crepes" | "waffles" | "desserts" | "drinks" | "behind";
+  category: "savory" | "crepes" | "waffles" | "desserts" | "drinks" | "behind";
   alt: string;
   blurDataURL: string;
 };

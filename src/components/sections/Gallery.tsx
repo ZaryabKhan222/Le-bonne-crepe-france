@@ -10,6 +10,7 @@ import { galleryPhotos } from "@/data/images";
 
 const filters = [
   { id: "all", label: "All" },
+  { id: "savory", label: "Savory" },
   { id: "crepes", label: "Crêpes" },
   { id: "waffles", label: "Waffles" },
   { id: "desserts", label: "Desserts" },

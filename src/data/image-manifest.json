@@ -1,5 +1,45 @@
 {
   "photos": {
+    "savory-salmon-gravlax-bagel": {
+      "src": "/assets/food/savory-salmon-gravlax-bagel.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "savory",
+      "alt": "Salmon gravlax bagel with cucumber, cream cheese and arugula on a dark stone plate",
+      "blurDataURL": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JZgCw7Yxs7O+Ga67lkYRqIa9+AAD+vEX1chGsLbPZ3LLlT7RHqPtrFwBNTdo3SUR5uKe/o3qYL/E/QV9C1m+oJ0TQa/SEQuRJe91CZtvms6uoCosUnIBK6qMoZdWk3XIYNIeV9Fo4Ai6Iyi76QWqhCHy9QaNVFYfYTRWMNbg5ESW6lXC2rSO4AAA="
+    },
+    "savory-nicoise-salad": {
+      "src": "/assets/food/savory-nicoise-salad.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "savory",
+      "alt": "Niçoise salad with tuna, soft-boiled egg, olives, green beans and cherry tomatoes in a white bowl",
+      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JZgCdMoBOAbRkx9QqqUyI+mmp+AD+lAnrvwqTXdt8KKilZjSe0DAzc5APFNdycmPk3O+adtPtRuZ+8g4FeYrb6CbEEunMYbdUU388hM9t7EXMACuUgnTCWm9gTnuudCtVit2OPfyPB0OMe2oq3Lld8/48PkvwAAA="
+    },
+    "savory-ham-cheese-croissant": {
+      "src": "/assets/food/savory-ham-cheese-croissant.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "savory",
+      "alt": "Toasted ham and Swiss cheese croissant, with a lavender latte and a strawberry matcha behind it",
+      "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbAC7MoR4GdBkkrl9zF25XRH4AP5OZkGxsD734JeG4GfWLjtWGMHmY/MCX2QEFvqxhPcL1q+kj/wkOZhqsemZLWFEdKdV8gb7L5Tbh1zAxEAPjQhIP7Pi9dEma6QLxrcXFel/fAWy0/hDgT4p9COQAM371A7wf63YkOjGnxm5eNNNNiFNM1Jm9s06dx0AAAA="
+    },
+    "savory-ham-cheese-croissant-close": {
+      "src": "/assets/food/savory-ham-cheese-croissant-close.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "savory",
+      "alt": "Close-up of a toasted croissant filled with ham and melted Swiss cheese",
+      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAQBQCdASoQABUAPu1iqU2ppaOiMAgBMB2JbAC7OUE4AKtn3YofhVjHhyoIbgxW8hcAAP7j16J8dX4jcfa6Ds4TAx9Ypnbq+pP8NUzsWODEXuEd4tZuKmealuRENOyqHDpT7OiMwAVCVyUhlbEbtOa+On4b8XAvGtklUpq3dcFhNaQ/4v32rEsa1jFWavxnkXEqYdXYM/kKjx/opRDx4hsl2AAAAA=="
+    },
+    "savory-herbal-butter": {
+      "src": "/assets/food/savory-herbal-butter.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "savory",
+      "alt": "Handcrafted herbal butter with chives and parsley on a white plate with a bright green herb oil",
+      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbACdB3gGy6HSnh8nTzXE0NTUAP4/wVO2kZTu/OQh6Vr9ldu74Cq3uUfrmrPwra4IKsOmlszV6fqqCQX4+ztpIfDRtW6TWBxu58Xjle7wtf2oBM3W4A6Tof9xLZ8Q5xwx534t/yCcO8Q3Oymf3oQd/LWXRVZ13vB/EVqVg4OBg/uJRTt6nJFQcZQAAA=="
+    },
     "crepe-duo-marble": {
       "src": "/assets/food/crepe-duo-marble.webp",
       "width": 1600,
@@ -63,6 +103,22 @@
       "category": "crepes",
       "alt": "Perfectly rolled golden crêpe with a sprig of parsley on a white plate",
       "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACwAwCdASoQABUAPu1iqk2ppaQiMAgBMB2JQAAJC4FXCi3joq1VwADeNN61fUrFLuF3IUE4JVsehDe78CZg9yJORhk0De9Lc8jtBk0eaM7p+rd2f4bUcN2cf/7SUw0rp0VDFD8cJOpW9UicAAA="
+    },
+    "waffle-belgian-red-berries": {
+      "src": "/assets/food/waffle-belgian-red-berries.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "waffles",
+      "alt": "Belgian waffle topped with strawberries, raspberries, blackberries, blueberries and whipped cream",
+      "blurDataURL": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAAAwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JagCdBPAKloVXF2hbakZJkgAA+wfpnLpnSBvIlaIYDFhQBl3m2smGu3vbI0cJdlJj4B57gAriCJC1Nz8AYXzgdtPmamwH3HW/j9RKQHh7xqaoRDErLzWn7Mc9BUd68QGVsCEMEv4CDQui1ToKKc1p5b5sOHJwKfS8Ght3hIhFf/mD4rvKeI/6bw4jAAAA"
+    },
+    "waffle-avocado-toast-savory": {
+      "src": "/assets/food/waffle-avocado-toast-savory.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "waffles",
+      "alt": "Avocado toast savory waffle on a bed of arugula with balsamic glaze",
+      "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbACsLwA8QFqRIhWKtnhzBuNQAP5OPfX42YxIZR05NcRCz+f6K78niBaN9IaHJbI36dmoLGWW9XjXGzVBJPzGBCMhiFpYroJWxXNRUEb+6EYKUXYWWP80uA8gU93EevIyFXQgu03fqiIvveFozC6jld5V33t9LImDZYVsIwEomfeVQsLU+oIA"
     },
     "waffle-salmon-top": {
       "src": "/assets/food/waffle-salmon-top.webp",
@@ -136,6 +192,70 @@
       "alt": "Iced caramel latte with a thick caramel swirl and milk foam, served in a sealed clear can on a silver tray",
       "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAAAwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbACsABm1fEbgo85Ylvw4yAAA/qobE//EyIUzu5VeudniV37O7xwPKvn4brw4JKak8YeIvBYNyEm3f5PBlDsqn44anh3YL9UPGXUtORexpvyZTl6m9OLCx/+zgEGWyT9kUrPTkXXBbSMnRG72h8f9y/OnNDN9q3F91236Wa4r6HQ/KHL2wQuWFgAAAA=="
     },
+    "drink-mr-green-detox": {
+      "src": "/assets/food/drink-mr-green-detox.webp",
+      "width": 1200,
+      "height": 1600,
+      "category": "drinks",
+      "alt": "Mr Green detox extract juice with fresh mint in a La Bonne Crêpe glass",
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JagAD5aFtSfIGTMshOgjrsAD8ISJNsRrfV6LNu6g3eBTgy4mB7JXcNnJSY504KKFRfvRIpIXTt4O3wvp/UcnCbiWmJ9KdkuZesstupoP8GJdGjBEfsgg4hCGYAB20FipadcZ+2lXbagJINKJZSUhJQqAAAA=="
+    },
+    "drink-lavender-latte-can": {
+      "src": "/assets/food/drink-lavender-latte-can.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "drinks",
+      "alt": "Lavender latte to go in a sealed clear can, with purple lavender layers swirling into the coffee",
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAABQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbACsOUAA2PDPtqCNOyTep15QAPwWjOuX7XBelPbgmYh0s1HL5LuwfAWqoLO6ZxnGhQz/EFX8pRiAqjZmKfUNiFljPr+RwlF18QJQD+qdkk3lAOcf3cCRLfenA810vGWfzk/Mo9ccfgRmwHiHI+61o6CgAA=="
+    },
+    "drink-strawberry-matcha-can": {
+      "src": "/assets/food/drink-strawberry-matcha-can.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "drinks",
+      "alt": "Strawberry matcha to go in a sealed clear can, green matcha over a strawberry layer",
+      "blurDataURL": "data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JZAC06B9k4eGLfMkj5OIAAP2tQE1xr83Cx7iH/DGbLjtyNkEi+cmVESwoYw78Fym9oQlCC5Vt3otrsMcRX9m72iwq0D84F8IDdtycfK1SvuKUtsJCjLad415jD8Q71NC8+GaRaOiFrSqqRLj5MpJP93RAAA=="
+    },
+    "drink-iced-lavender-biscoff": {
+      "src": "/assets/food/drink-iced-lavender-biscoff.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "drinks",
+      "alt": "Iced coffee drink with purple swirls, whipped cream and a Biscoff crumble rim, served with a Biscoff biscuit",
+      "blurDataURL": "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAABwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JaACdMoAlsQ8cD2N3gdwQYZcI6AD+qvnR7G7EjKeStKdpiWj4Q9yoU28sKK+nF7Mvy7u286GWUYnrOT/3EdWe2N6NuQJQ92/plMdX+kxRjvtRl2iu/B42RQ1lfOkxEO3xAUMTSPg45K0NxA7qfDt51zy1PZFCkYryhpDdEAGE0AAA"
+    },
+    "drink-purple-matcha": {
+      "src": "/assets/food/drink-purple-matcha.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "drinks",
+      "alt": "Iced purple latte over matcha, topped with whipped cream and biscuit crumbs",
+      "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYgC7MoADE7r33vZp5fwb+xd2QAD+o2fE6Hji+aaNI9/JiBAVE9VoEhesBLnm1mUBSudNPjJpkznX6cpbHxLRrymP2St3QiqTayjuEJP+3zIdr10T/FDevJpYgjGFtK5im+wQ87sMur892IFGxoAA"
+    },
+    "drink-pistachio-latte": {
+      "src": "/assets/food/drink-pistachio-latte.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "drinks",
+      "alt": "Extra pistachio latte topped with whipped cream and crushed pistachios in a La Bonne Crêpe glass",
+      "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JaACdMoAluxl3ibSxbvWojP/HP4AA/tDW7jGd5VL9eVk4bNrGCF4TuDLCxwjR14RV22TdzhddvGcpY5TG5OoBwvnZNGjX+HL3DberhlAGOFMm4zpPCOFqs4uHx7oFBG7Kxl5MxC6bqnwO7pRgIDDVYp9zKFqRsLEQvI5TmKccAA=="
+    },
+    "drink-macchiato": {
+      "src": "/assets/food/drink-macchiato.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "drinks",
+      "alt": "Layered macchiato in a glass cup with a chocolate drizzle on the foam, served with a Biscoff biscuit",
+      "blurDataURL": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbAC7MoABoras/asC3GV8qlAA/qri2Lw4QMgXstFidduaLPZxItJ/aCY2R7K6iofyN6nz3NLaWhL73+hB4AeDthsvrm0s6l32tXFcLiHuKvGol+Hw4O4fPVwYGDKv4DCjdNa/kleH9ZMqz/dmPYqTmfAlGs5fATfHXRT4yPz0rukuSQC9C+uAAAA="
+    },
+    "drink-cappuccino": {
+      "src": "/assets/food/drink-cappuccino.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "drinks",
+      "alt": "Cappuccino with cocoa-dusted foam in a glass cup, served with a Biscoff biscuit",
+      "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JZAC06YxYwDiJ5bkRAYmSAAD+iN7hcXoDaVbCc3gYxREgrmV3N82Ac2LQpw35bxwXDwIQ57J5hvxtGrt83VATDHqZIs3LCwJc0dsr5/fkDWzbey6V3JarB+dgmKJ+sFnZR+3SlufFVg7JRDD0z6RPnNgEceGgAAA="
+    },
     "dessert-chocolate-mousse": {
       "src": "/assets/food/dessert-chocolate-mousse.webp",
       "width": 1439,
@@ -159,6 +279,22 @@
       "category": "desserts",
       "alt": "Golden apple crumble baked in a white ramekin, garnished with fresh mint",
       "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAABwBACdASoQABgAPu1iqU2ppaOiMAgBMB2JbACsHYAIMMYKjrwdsEUgSQQkwAD9SZNMngThZzcBynXvQrU7vpuyCOc9Db1kOhmNChDPi1JGAmF4RcjQgE1gF4mIBEifQjDZlRnBJOgiYu+N5juLnc2QV/VzIZdwcu7236Umfe+3084gygJV2rPJFzt1z40DJICWuml6hmmpv2OSvImkHnZ4Ky2H+6QAAAA="
+    },
+    "dessert-milky-way-pudding-rice": {
+      "src": "/assets/food/dessert-milky-way-pudding-rice.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "desserts",
+      "alt": "Milky way pudding rice: red berry jelly, vanilla rice pudding and blue spirulina whipped cream with fresh strawberries",
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JQBOgAihPxMFsxnxJAAD9/1w+Xf8Fpdh6gVo7fXGFTHbRfbUqSB9Y3oEz3ZoJTcp/40tdDl2B6ctZqcMR4YPXbBoELH3tBy+A5p3ApGOtTy14S9xh5MpdSFx7tZpAfVObQYsAAAA="
+    },
+    "dessert-creme-brulee": {
+      "src": "/assets/food/dessert-creme-brulee.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "desserts",
+      "alt": "Crème brûlée with a caramelized sugar crust, topped with a strawberry, blackberry and mint",
+      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbACdMoBOACfGZHkvyAqXbaQwDIhAAM49bWE2+xTyXapfTyme2PHjG2OqbhZcoYIK/eA/T6TVZXyne2PTSq7PEh4uK6ebD4yZZkG7KjJWLWKNMwiJ0KWtAucWDd86Illt6PFP22ME9a3+0cOPJN/trPO6+onYudJP48iJ3Au+bl9zKbLqttz0vXsAAA=="
     },
     "cart-counter": {
       "src": "/assets/food/cart-counter.webp",
