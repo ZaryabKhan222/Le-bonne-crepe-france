@@ -1,4 +1,4 @@
-import { site } from "@/data/site";
+import { site, grandOpening } from "@/data/site";
 
 /** LocalBusiness / Restaurant structured data for search engines. */
 export function restaurantJsonLd() {
@@ -31,5 +31,24 @@ export function restaurantJsonLd() {
       name: "Book Catering",
       target: `${site.url}/#contact`,
     },
+  };
+}
+
+/**
+ * Structured data for the grand opening (Sep 19). No longer published now
+ * that the event is over; kept for the next event.
+ */
+export function grandOpeningJsonLd() {
+  return {
+    "@type": "Event",
+    name: `${site.name} Grand Opening`,
+    description: `${grandOpening.intro} ${grandOpening.tagline}`,
+    startDate: grandOpening.startDate,
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+    organizer: { "@type": "Organization", name: site.legalName, url: site.url },
+    location: { "@type": "Place", name: site.name, address: site.areaServed },
+    image: `${site.url}/og-image.webp`,
+    url: `${site.url}/#grand-opening`,
   };
 }

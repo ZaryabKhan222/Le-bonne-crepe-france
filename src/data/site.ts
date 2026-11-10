@@ -9,6 +9,35 @@
  */
 export const PRIMARY_LOGO: "gold" | "neon" = "gold";
 
+/**
+ * Grand opening of the café. The announcement bar, the hero callout and the
+ * dedicated section all read from here. After `showUntil` the bar and the hero
+ * callout hide themselves automatically; the section stays until removed.
+ */
+export const grandOpening = {
+  headline: "Grand Opening, Saturday September 19th, from 5 PM",
+  /** ISO date with the Miami offset, used for structured data. */
+  startDate: "2026-09-19T17:00:00-04:00",
+  /** Bar and hero callout disappear after this moment (end of opening night). */
+  showUntil: "2026-09-20T04:00:00-04:00",
+  intro:
+    "Come celebrate and discover a true taste of France: waffles and sweet creations, gourmet coffee, signature and recovery drinks, and fresh healthy food.",
+  tagline: "More than a smoothie bar, it's an experience.",
+} as const;
+
+/**
+ * TODO(client): replace with the Square membership / loyalty link when it is
+ * ready. While the URL still contains "PLACEHOLDER", the Memberships button
+ * sends visitors to WhatsApp instead of a dead link.
+ */
+/** True until the end of opening night; drives the bar and the hero callout. */
+export function isOpeningLive(): boolean {
+  return Date.now() < new Date(grandOpening.showUntil).getTime();
+}
+
+export const MEMBERSHIP_URL = "https://square.link/u/PLACEHOLDER";
+export const membershipsLive = !MEMBERSHIP_URL.includes("PLACEHOLDER");
+
 export const site = {
   name: "La Bonne Crêpe de France",
   legalName: "La Bonne Crêpe de France LLC",
@@ -42,6 +71,7 @@ export const nav = [
   { label: "Story", href: "#story" },
   { label: "Menu", href: "#menu" },
   { label: "Gallery", href: "#gallery" },
+  { label: "Memberships", href: "#memberships" },
   { label: "Catering", href: "#catering" },
   { label: "Contact", href: "#contact" },
 ] as const;

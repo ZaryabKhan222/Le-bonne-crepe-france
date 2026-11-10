@@ -25,7 +25,7 @@ export default function Lightbox({
       if (index === null) return;
       onNavigate((index + dir + photos.length) % photos.length);
     },
-    [index, photos.length, onNavigate]
+    [index, photos.length, onNavigate],
   );
 
   useEffect(() => {
@@ -36,7 +36,9 @@ export default function Lightbox({
       if (e.key === "ArrowLeft") step(-1);
       // Keep tab focus inside the dialog's three controls.
       if (e.key === "Tab") {
-        const focusables = document.querySelectorAll<HTMLElement>("[data-lightbox-control]");
+        const focusables = document.querySelectorAll<HTMLElement>(
+          "[data-lightbox-control]",
+        );
         if (focusables.length === 0) return;
         const first = focusables[0];
         const last = focusables[focusables.length - 1];
@@ -87,6 +89,7 @@ export default function Lightbox({
               width={current.width}
               height={current.height}
               sizes="(max-width: 768px) 92vw, 72vw"
+              quality={90}
               className="max-h-[82vh] w-auto rounded-md object-contain shadow-2xl"
               placeholder="blur"
               blurDataURL={current.blurDataURL}
@@ -104,32 +107,71 @@ export default function Lightbox({
             aria-label="Close gallery view"
             className="absolute top-4 right-4 flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 text-cream transition-colors hover:border-gold-light hover:text-gold-light"
           >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M2 2l12 12M14 2L2 14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 2l12 12M14 2L2 14"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+              />
             </svg>
           </button>
-          <button
-            data-lightbox-control
-            type="button"
-            onClick={() => step(-1)}
-            aria-label="Previous photo"
-            className="absolute left-2 flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 text-cream transition-colors hover:border-gold-light hover:text-gold-light md:left-6"
-          >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M10 2L4 8l6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-          <button
-            data-lightbox-control
-            type="button"
-            onClick={() => step(1)}
-            aria-label="Next photo"
-            className="absolute right-2 flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 text-cream transition-colors hover:border-gold-light hover:text-gold-light md:right-6"
-          >
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-              <path d="M6 2l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+          {photos.length > 1 && (
+            <button
+              data-lightbox-control
+              type="button"
+              onClick={() => step(-1)}
+              aria-label="Previous photo"
+              className="absolute left-2 flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 text-cream transition-colors hover:border-gold-light hover:text-gold-light md:left-6"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M10 2L4 8l6 6"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          )}
+          {photos.length > 1 && (
+            <button
+              data-lightbox-control
+              type="button"
+              onClick={() => step(1)}
+              aria-label="Next photo"
+              className="absolute right-2 flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 text-cream transition-colors hover:border-gold-light hover:text-gold-light md:right-6"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M6 2l6 6-6 6"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          )}
         </motion.div>
       )}
     </AnimatePresence>

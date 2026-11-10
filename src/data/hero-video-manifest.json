@@ -1,0 +1,14 @@
+{
+  "hero-poster": {
+    "src": "/assets/hero/hero-poster.webp",
+    "width": 1440,
+    "height": 1080,
+    "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQAgCdASoQAAwAA4BaJbACdADpJ73v3T/AAP7s4XDl8krnzDo39lV7dU76UTQSbahp1Yz+zu31ZCwi+WEsRWDNxtW2CSuu19HI+hku1KrgfKigGRQ5aD4SEjD7Nr6iW+9fKtloymtDfpog56BvcAAA"
+  },
+  "hero-poster-mobile": {
+    "src": "/assets/hero/hero-poster-mobile.webp",
+    "width": 1080,
+    "height": 1920,
+    "blurDataURL": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAACQBACdASoQABwAPu1iqU2ppaOiMAgBMB2JbACdAYyK7auUPViD/ZgbfLxpIAAA/uRn5ZsG+G8C/8aWscKcgXC2e3RuYW3kTpYdaDH4+VvUv18OIYeYq+kn5hVjqercYoIIzdU/JdNU4j97EztXl46n3lTP6LxIx/i9yk3hlrd0uFSYjr7s0rKqnFeBSlsb2LFzP76mvnC7Tx0YPEYuG3H9JwC4tDiAGtjbeeLJZ67GQz/6QLRauZk74TW9RqX5EMBIplxpI4AAAA=="
+  }
+}

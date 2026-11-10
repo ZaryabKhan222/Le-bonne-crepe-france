@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { nav, site } from "@/data/site";
-import { logoNeon } from "@/data/images";
+import { logoNeon, foodMenuImage, drinkMenuImage } from "@/data/images";
 
 export default function Footer() {
   return (
@@ -32,12 +32,20 @@ export default function Footer() {
               </a>
             ))}
             <a
-              href="/MENU-FIN.pdf"
+              href={foodMenuImage.original}
               target="_blank"
               rel="noopener noreferrer"
               className="w-fit text-cream/75 transition-colors duration-300 hover:text-gold-light"
             >
-              Menu PDF
+              Food Menu (image)
+            </a>
+            <a
+              href={drinkMenuImage.original}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-fit text-cream/75 transition-colors duration-300 hover:text-gold-light"
+            >
+              Drink Menu (image)
             </a>
           </nav>
 

@@ -31,7 +31,8 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       const el = document.querySelector(id);
       if (!el) return;
       e.preventDefault();
-      lenis.scrollTo(el as HTMLElement, { offset: -72 });
+      const bar = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--announce-h")) || 0;
+      lenis.scrollTo(el as HTMLElement, { offset: -(72 + bar) });
       history.replaceState(null, "", id);
     };
     document.addEventListener("click", onClick);

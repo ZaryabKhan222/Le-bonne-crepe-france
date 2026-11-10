@@ -15,12 +15,12 @@ const OUT = path.join(ROOT, "public", "assets");
 
 /** name -> { file, dir, width, category, alt } */
 const PHOTOS = [
-  // Savory plates (restaurant, first so the gallery opens on the current menu)
-  { id: "savory-salmon-gravlax-bagel", file: "new photos/salmon-gravlax-bagel.jpeg", category: "savory", alt: "Salmon gravlax bagel with cucumber, cream cheese and arugula on a dark stone plate" },
-  { id: "savory-nicoise-salad", file: "new photos/nicoise-salad.jpeg", category: "savory", alt: "Niçoise salad with tuna, soft-boiled egg, olives, green beans and cherry tomatoes in a white bowl" },
-  { id: "savory-ham-cheese-croissant", file: "new photos/ham-cheese-croissant.jpeg", category: "savory", alt: "Toasted ham and Swiss cheese croissant, with a lavender latte and a strawberry matcha behind it" },
-  { id: "savory-ham-cheese-croissant-close", file: "new photos/ham-cheese-croissant-close.jpeg", category: "savory", alt: "Close-up of a toasted croissant filled with ham and melted Swiss cheese" },
-  { id: "savory-herbal-butter", file: "new photos/herbal-butter.jpeg", category: "savory", alt: "Handcrafted herbal butter with chives and parsley on a white plate with a bright green herb oil" },
+  // Plates from the restaurant (November batch)
+  { id: "savory-salmon-gravlax-bagel", file: "new photos/salmon-gravlax-bagel.jpeg", category: "plates", alt: "Salmon gravlax bagel with cucumber, cream cheese and arugula on a dark stone plate" },
+  { id: "savory-nicoise-salad", file: "new photos/nicoise-salad.jpeg", category: "plates", alt: "Niçoise salad with tuna, soft-boiled egg, olives, green beans and cherry tomatoes in a white bowl" },
+  { id: "savory-ham-cheese-croissant", file: "new photos/ham-cheese-croissant.jpeg", category: "plates", alt: "Toasted ham and Swiss cheese croissant, with a lavender latte and a strawberry matcha behind it" },
+  { id: "savory-ham-cheese-croissant-close", file: "new photos/ham-cheese-croissant-close.jpeg", category: "plates", alt: "Close-up of a toasted croissant filled with ham and melted Swiss cheese" },
+  { id: "savory-herbal-butter", file: "new photos/herbal-butter.jpeg", category: "plates", alt: "Handcrafted herbal butter with chives and parsley on a white plate with a bright green herb oil" },
   // Crêpes
   { id: "crepe-duo-marble", file: "food images/0a4d7027-f65d-4ad6-b2ca-54150d952b4a.jpeg", category: "crepes", alt: "Two fresh crêpes on a marble table, one topped with grated Swiss cheese and one with strawberry jelly and whipped cream" },
   { id: "crepe-duo-portrait", file: "food images/375454ac-f240-4db9-b6dd-c3f603d62298.jpeg", category: "crepes", alt: "Ham and cheese crêpe beside a strawberry jelly crêpe with whipped cream, served in gingham trays" },
@@ -65,7 +65,7 @@ const PHOTOS = [
 ];
 
 async function ensureDirs() {
-  for (const d of ["food", "logos", "hero", "og", "menu"]) {
+  for (const d of ["food", "logos", "hero", "og"]) {
     await mkdir(path.join(OUT, d), { recursive: true });
   }
 }
@@ -184,29 +184,13 @@ async function processHero() {
   return manifest;
 }
 
-/** Printed food menu, shown in the menu section (the table QR codes open /#menu). */
-async function processMenu() {
-  const input = path.join(SRC, "food-menu.jpeg");
-  const outFile = path.join(OUT, "menu", "food-menu.webp");
-  // Full resolution and high quality: the menu text has to stay legible.
-  const info = await sharp(input).rotate().webp({ quality: 90 }).toFile(outFile);
-  console.log(`menu food-menu: ${info.width}x${info.height} ${(info.size / 1024).toFixed(0)}kb`);
-  return {
-    "food-menu": {
-      src: "/assets/menu/food-menu.webp", width: info.width, height: info.height,
-      blurDataURL: await blurDataURL(input),
-    },
-  };
-}
-
 async function main() {
   await ensureDirs();
   const photos = await processPhotos();
   const logos = await processLogos();
   const hero = await processHero();
-  const menu = await processMenu();
   await copyFile(path.join(SRC, "MENU FIN  (1).pdf"), path.join(ROOT, "public", "MENU-FIN.pdf"));
-  const manifest = { photos, logos, hero, menu };
+  const manifest = { photos, logos, hero };
   await mkdir(path.join(ROOT, "src", "data"), { recursive: true });
   await writeFile(
     path.join(ROOT, "src", "data", "image-manifest.json"),
