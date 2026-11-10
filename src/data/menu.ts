@@ -1,236 +1,236 @@
-/**
- * THE single source of truth for the menu.
- *
- * To update prices or items, edit this file only. Every change here is
- * reflected on the site automatically, no design work needed.
- *
- * - `price` is a number in USD. Use `null` for items whose price is not
- *   set yet: the site will show "ask" instead of a price.
- * - `description` is optional.
- * - `note` on a category renders as a small line under the category title.
- *
- * The printed menu PDF lives at /public/MENU-FIN.pdf and is linked from the
- * menu section ("Download Menu"). Replace that file when the menu changes.
- */
+// ============================================================
+// La Bonne Crêpe de France, Menu Data
+// ------------------------------------------------------------
+// Single source of truth for the menu. To update prices or
+// items later, edit this file only. No redesign needed.
+//
+// Two datasets with the same shape, both rendered in the one
+// scrollable Menu section: `foodMenu` first, then `drinkMenu`.
+//
+// Food board tagline:  "French flavors, fresh ingredients, better days"
+// Drink board tagline: "Great drinks, better days"
+// Milk note (drinks):  Choice of almond, oat, or regular milk. No extra charge.
+// ============================================================
 
 export type MenuItem = {
   name: string;
-  price: number | null;
   description?: string;
+  price: string; // keep as string so "$3" / "MP" / "Seasonal" all work
 };
 
 export type MenuCategory = {
   id: string;
   title: string;
-  note?: string;
+  subtitle?: string;
   items: MenuItem[];
 };
 
-export const menu: MenuCategory[] = [
+export const milkNote = "Choice of almond, oat, or regular milk. No extra charge.";
+
+export const foodMenu: MenuCategory[] = [
   {
-    id: "crepes",
-    title: "Crêpes",
-    // TODO(client): the printed menu does not list the crêpe selection.
-    // Fill in the full list and prices here when ready.
-    note: "Made to order on the cast iron griddle. Ask at the cart for today's full selection.",
-    items: [
-      {
-        name: "La Complète, Ham & Swiss",
-        price: null,
-        description: "Forest ham or turkey ham, melted Swiss cheese, folded in a fresh crêpe",
-      },
-      {
-        name: "Strawberry Jelly Crêpe",
-        price: null,
-        description: "Organic strawberry jelly, whipped cream",
-      },
-      {
-        name: "Banana Nutella Crêpe",
-        price: null,
-        description: "Caramelized banana, Nutella, a touch of sea salt",
-      },
-      {
-        name: "Butter & Sugar Crêpe",
-        price: null,
-        description: "The French classic, pure and simple",
-      },
-    ],
-  },
-  {
-    id: "waffles",
-    title: "Waffles & Toast",
-    items: [
-      {
-        name: "Ham & Cheese Waffle",
-        price: 15,
-        description: "Sweet potato waffle, forest ham or turkey ham, mixed Swiss cheese, thyme, garlic cream",
-      },
-      {
-        name: "Avocado Toast",
-        price: 16,
-        description: "Fresh toasted bread, avocado, sun-dried tomatoes, ricotta, basil, honey, balsamic glaze",
-      },
-    ],
-  },
-  {
-    id: "croissants",
-    title: "Toasted Croissants",
+    id: "waffles-toast",
+    title: "Waffles Toast",
+    subtitle: "Sweet or savory, always delicious",
     items: [
       {
         name: "Ham & Cheese",
-        price: 16,
-        description: "Forest ham or turkey ham, mixed Swiss cheese, thyme, garlic cream",
+        description:
+          "Sweet potatoes waffle, forest ham or turkey ham, mix swiss cheese, thyme, garlic cream.",
+        price: "$14",
       },
-      { name: "Strawberry Jelly", price: 12 },
-      { name: "Banana Nutella", price: 12 },
     ],
   },
   {
-    id: "salads",
+    id: "croissant-toasted",
+    title: "Croissant Toasted",
+    subtitle: "Flaky, warm, irresistible",
+    items: [
+      {
+        name: "Ham & Cheese",
+        description: "Forest ham or turkey ham, mix swiss cheese.",
+        price: "$14",
+      },
+      { name: "Strawberry Jelly", price: "$10" },
+      { name: "Banana Nutella", price: "$10" },
+    ],
+  },
+  {
+    id: "sandwich-bagel",
+    title: "Sandwich & Bagel",
+    subtitle: "Fresh ingredients, big flavors",
+    items: [
+      {
+        name: "Bagel",
+        description:
+          "Sweet potatoes, salmon gravlax homemade, garlic cream cheese, chive, caramelized onion, balsamic glaze and cucumber.",
+        price: "$16",
+      },
+      {
+        name: "Croque Monsieur",
+        description: "Sweet potatoes, bechamel sauce, ham and swiss, fresh salad on side.",
+        price: "$14",
+      },
+    ],
+  },
+  {
+    id: "pastry-george-berger",
+    title: "Pastry by Chef George Berger",
+    subtitle: "Artisan pastries, French tradition",
+    items: [
+      { name: "Strawberry Tartlet", price: "$10" },
+      { name: "Raspberry Tartlet", price: "$10" },
+      { name: "Apple Tartlet", price: "$10" },
+    ],
+  },
+  {
+    id: "gourmet-dessert",
+    title: "Gourmet Dessert",
+    subtitle: "Sweet moments, French style",
+    items: [
+      { name: "Chocolate Mousse", price: "$8" },
+      { name: "Creme Brulee", price: "$8" },
+    ],
+  },
+  {
+    id: "combo-breakfast",
+    title: "Combo Breakfast",
+    subtitle: "A perfect start to your day",
+    items: [
+      {
+        name: "Parisian",
+        description:
+          "Coffee or tea, cold press juice, half baguette, handcrafted butter suzette, homemade strawberry jelly.",
+        price: "$22",
+      },
+    ],
+  },
+  {
+    id: "fresh-salads",
     title: "Fresh Salads",
+    subtitle: "Crisp, colorful, nourishing",
     items: [
+      // Price confirmed by the owner at $18; the printed board still shows $16.
+      { name: "Niçoise by Chef Rom", price: "$18" },
       {
-        name: "Niçoise",
-        price: 16,
-        description: "Lettuce, green beans, olives, cherry tomatoes, fresh tuna",
+        name: "Tomato Buratta",
+        description: "Mix carpaccio tomatoes, fresh buratta, basil, glaze and balsamic.",
+        price: "$18",
       },
       {
-        name: "Tomato Burrata",
-        price: 17,
-        description: "Carpaccio of mixed tomatoes, fresh burrata, basil, strawberry glaze and balsamic",
-      },
-      {
-        name: "Buddha Bowl",
-        price: 17,
-        description: "Brown rice, sweet potatoes, carrot, cherry tomatoes, cucumber, crispy onion",
-      },
-      {
-        name: "Veggie Salad",
-        price: 10,
-        description: "Cucumber tagliatelle, cream and lime",
+        name: "Tagliatella Veggies",
+        description:
+          "Cucumber, carrot, beet, feta cheese, apple, pistachio beans, cream vinegar sauce.",
+        price: "$15",
       },
     ],
   },
   {
-    id: "pastry",
-    title: "Pastry by Chef George Berger, MOF",
-    note: "Crafted by a Meilleur Ouvrier de France, one of French pastry's highest honors.",
+    id: "cold-soup-signature",
+    title: "Cold Soup Signature",
+    subtitle: "Chilled, bright, refreshing",
     items: [
-      { name: "Strawberry Tartlet", price: 9, description: "Pastry cream and organic strawberry" },
-      { name: "Raspberry Tartlet", price: 9, description: "Pastry cream and organic raspberry" },
-      { name: "Apple Tartlet", price: 9 },
-      { name: "Macaron", price: 14 },
-      { name: "Canelé de Bordeaux", price: 5 },
-      { name: "Croissant", price: 6 },
+      {
+        name: "Fresh Provencal Gaspacho",
+        description:
+          "Watermelon, tomato, pepper, strawberry, feta cheese, spinach oil, bacon, mint.",
+        price: "$12",
+      },
+      {
+        name: "Venise Verte",
+        description: "Cucumber, spinach, mint, feta cheese, spinach oil, roll ham and truffle.",
+        price: "$12",
+      },
     ],
   },
+];
+
+export const drinkMenu: MenuCategory[] = [
   {
-    id: "coffee",
+    id: "hot-coffee-matcha",
     title: "Hot Coffee & Matcha",
+    subtitle: "Rich flavors, expertly crafted",
     items: [
-      { name: "Espresso", price: 4 },
-      { name: "Matcha Latte", price: 6 },
-      { name: "Macchiato", price: 6 },
-      { name: "Tea", price: 4 },
+      { name: "Espresso", description: "Bold and aromatic. A timeless classic.", price: "$3" },
+      { name: "Matcha Latte", description: "Velvety green tea, naturally energizing.", price: "$8" },
+      { name: "Macchiato", description: "Espresso with a touch of steamed milk.", price: "$7" },
+      { name: "Tea Selection", description: "A variety of premium teas.", price: "$3" },
     ],
   },
   {
-    id: "gourmet-coffee",
-    title: "Gourmet Coffee Creations",
-    note: "Milk options: whole, 2%, almond or oat.",
+    id: "iced-gourmet-coffee",
+    title: "Iced Gourmet Coffee",
+    subtitle: "Refreshingly delicious",
     items: [
-      { name: "Arequipe Macchiato", price: 14 },
-      { name: "Lavender Latte", price: 14 },
-      { name: "Ube Latte", price: 14 },
-      { name: "Lavender Matcha", price: 14 },
-      { name: "Strawberry Matcha", price: 14 },
-      { name: "Blueberry Matcha", price: 14 },
-      { name: "Blue Spirulina Latte", price: 14 },
+      { name: "Arequipe Macchiato", description: "Smooth coffee with a hint of caramel.", price: "$14" },
+      { name: "Lavender Latte", description: "Floral and refreshing.", price: "$12" },
+      { name: "Ube Latte", description: "Unique, creamy and naturally vibrant.", price: "$12" },
+      { name: "Lavender Matcha", description: "A calming twist on a classic.", price: "$12" },
+      { name: "Strawberry Matcha", description: "Fruity, fresh and energizing.", price: "$12" },
+      { name: "Pistachio Latte", description: "Rich, nutty and irresistibly smooth.", price: "$12" },
+      { name: "Blue Spirulina Latte", description: "A colorful boost, full of goodness.", price: "$12" },
+      { name: "French Vanilla Latte", description: "Creamy, sweet and always a favorite.", price: "$10" },
     ],
   },
   {
-    id: "cold-press",
+    id: "cold-press-juice",
     title: "Cold Press Juice",
+    subtitle: "Natural nutrition, real energy",
     items: [
-      {
-        name: "Detox Lemonade",
-        price: 10,
-        description: "Old fashioned lemonade, spinach, BCAA, vitamin C, honey",
-      },
-      {
-        name: "Bloody Booster",
-        price: 10,
-        description: "Key lime lemonade, beet, carrot, BCAA, vitamins, honey, sea salt",
-      },
+      { name: "Detox Lemonade", description: "Old fashion lemonade, pineapple, lemon and ginger.", price: "$10" },
+      { name: "Green Day", description: "Apple, spinach, celery and ginger.", price: "$10" },
+      { name: "Bloody Booster", description: "Beet, lime, lemon, ginger and carrots.", price: "$10" },
     ],
   },
   {
-    id: "protein-shakes",
-    title: "Protein Blend Shakes",
+    id: "milk-shake",
+    title: "Milk Shake",
+    subtitle: "Creamy. Indulgent. Irresistible.",
     items: [
-      {
-        name: "Banana Roast",
-        price: 15,
-        description: "Banana, vanilla protein, honey, coffee",
-      },
-      {
-        name: "Green Machine",
-        price: 15,
-        description: "Apple, spinach, cucumber, protein, agave",
-      },
-      {
-        name: "Sunset Isla Morada",
-        price: 15,
-        description: "Carrot, turmeric, grapefruit, key lime juice, protein, agave",
-      },
+      { name: "Chocolate", description: "Rich chocolate, blended to perfection.", price: "$12" },
+      { name: "Strawberry", description: "Real strawberries, real goodness.", price: "$12" },
+      { name: "Vanilla", description: "Classic flavor, always a treat.", price: "$12" },
     ],
   },
   {
-    id: "juices",
-    title: "Juices",
+    id: "protein-shake",
+    title: "Protein Shake",
+    subtitle: "Fuel your day",
     items: [
-      { name: "Pascal Gourmet Detox, Carrot Power", price: 10 },
-      { name: "Pascal Gourmet Detox, Pineapple Shell", price: 10 },
-      { name: "Little Rick CBD", price: 10, description: "Black cherry or pineapple" },
+      { name: "Banana Roast", description: "Banana, vanilla protein, honey and coffee.", price: "$15" },
+      { name: "Green Machine", description: "Apple, spinach, celery, protein, flaxseed and agave.", price: "$15" },
+      { name: "Sunset Isla Morada", description: "Carrot, turmeric, pineapple, lime juice, protein and agave.", price: "$15" },
     ],
   },
   {
-    id: "classics",
-    title: "Classics & Mocktails",
+    id: "classic-mocktails",
+    title: "Classic Mocktails",
+    subtitle: "Refreshingly sophisticated",
     items: [
-      {
-        name: "Virgin Mojito",
-        price: 10,
-        description: "Coconut, strawberry or regular",
-      },
-      {
-        name: "Virgin Lagoon",
-        price: 10,
-        description: "Key lime lemonade, blueberry syrup",
-      },
-      {
-        name: "K Kosa",
-        price: 14,
-        description: "Manzana juice, jasmine, ginger ale",
-      },
-      {
-        name: "Le Grand Jean",
-        price: 14,
-        description: "Soda water, spinach juice, manzana",
-      },
+      { name: "Virgin Mojito", description: "Coconut, strawberry and regular sugar.", price: "$10" },
+      { name: "Virgin Lagoon", description: "Key lime, lemonade, blue curaçao syrup.", price: "$10" },
+      { name: "Virgin Piña Colada", description: "Pineapple juice, coconut cream.", price: "$10" },
+    ],
+  },
+  {
+    id: "mocktail-creations",
+    title: "Mocktail Creations",
+    subtitle: "Bold flavors. Zero alcohol.",
+    items: [
+      { name: "K on the Beach", description: "Mandarin juice, guava and cranberry.", price: "$10" },
+      { name: "The Gran Jean", description: "Blackberry, almond, lime and soda.", price: "$10" },
+      { name: "The Great Bassam", description: "Pineapple, jasmine, sarsaparilla and bitters.", price: "$10" },
     ],
   },
   {
     id: "water-soda",
     title: "Water & Soda",
+    subtitle: "Stay refreshed",
     items: [
-      { name: "Water Bottle", price: 4 },
-      { name: "Perrier", price: 6 },
-      { name: "Coke / Diet Coke", price: 4 },
-      { name: "Sprite", price: 4 },
+      { name: "Water Bottle", price: "$4" },
+      { name: "Sparkling Water", price: "$6" },
+      { name: "Coke / Diet Coke", price: "$4" },
+      { name: "Sprite", price: "$4" },
     ],
   },
 ];
-
-/** Categories shown in the compact featured view before "View full menu". */
-export const featuredCategoryIds = ["crepes", "waffles", "salads", "gourmet-coffee"];

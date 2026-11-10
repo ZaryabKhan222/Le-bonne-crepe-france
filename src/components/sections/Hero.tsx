@@ -4,8 +4,8 @@ import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "
 import dynamic from "next/dynamic";
 import { getImageProps } from "next/image";
 import Button from "@/components/ui/Button";
-import { heroDesktop, heroMobile } from "@/data/images";
-import { site } from "@/data/site";
+import { heroPoster, heroPosterMobile, heroVideoSources, heroVideoSourcesMobile } from "@/data/images";
+import { grandOpening, site } from "@/data/site";
 
 // The Three.js bundle never blocks first paint: it starts loading only after
 // the window load event, once the browser is idle, and is skipped entirely
@@ -26,6 +26,12 @@ function isLowPower(): boolean {
       (navigator.hardwareConcurrency ?? 8) <= 2;
   }
   return lowPowerCache;
+}
+
+/** Respect the Data Saver setting: no background video on metered connections. */
+function savesData(): boolean {
+  type NavigatorWithConnection = Navigator & { connection?: { saveData?: boolean } };
+  return (navigator as NavigatorWithConnection).connection?.saveData === true;
 }
 
 function useMediaQuery(query: string, serverDefault = false): boolean {
@@ -72,25 +78,27 @@ function useAfterLoadIdle(): boolean {
 }
 
 /**
- * Art-directed hero photograph: the browser picks the right file from the
- * <picture> element before any JavaScript runs, so mobile never downloads the
- * desktop crop and the image starts loading with the HTML.
+ * Poster still-frame from the café walkthrough. It is the first thing painted
+ * (before any JavaScript), the fallback for phones and reduced motion, and the
+ * frame the video fades in over on desktop. The browser picks the portrait or
+ * landscape file from the <picture> element, so a phone never downloads the
+ * desktop crop.
  */
-function HeroPicture() {
+function HeroPoster() {
   const common = { alt: "", sizes: "100vw", priority: true } as const;
   const {
     props: { srcSet: desktopSrcSet },
   } = getImageProps({
     ...common,
-    src: heroDesktop.src,
-    width: heroDesktop.width,
-    height: heroDesktop.height,
+    src: heroPoster.src,
+    width: heroPoster.width,
+    height: heroPoster.height,
   });
   const { props: mobileProps } = getImageProps({
     ...common,
-    src: heroMobile.src,
-    width: heroMobile.width,
-    height: heroMobile.height,
+    src: heroPosterMobile.src,
+    width: heroPosterMobile.width,
+    height: heroPosterMobile.height,
   });
 
   return (
@@ -98,11 +106,11 @@ function HeroPicture() {
       <source media="(min-width: 768px)" srcSet={desktopSrcSet} />
       <img
         {...mobileProps}
-        alt="A golden crêpe being turned by hand on the cast iron griddle at a Miami farmers market"
+        alt="Inside La Bonne Crêpe: the wooden bar counter set for service under warm lamp light"
         fetchPriority="high"
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 h-full w-full object-cover object-[50%_45%]"
         style={{
-          backgroundImage: `url(${heroMobile.blurDataURL})`,
+          backgroundImage: `url(${heroPosterMobile.blurDataURL})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -111,14 +119,60 @@ function HeroPicture() {
   );
 }
 
-export default function Hero() {
+/**
+ * Looping walkthrough video. Mounted after the page has loaded and gone idle,
+ * so it never competes with the first paint. Phones get a portrait encode,
+ * larger screens the landscape band. Plays only while the hero is on screen
+ * and fades in over the poster once it can play.
+ */
+function HeroVideo({ active, isMobile }: { active: boolean; isMobile: boolean }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+  const sources = isMobile ? heroVideoSourcesMobile : heroVideoSources;
+  const poster = isMobile ? heroPosterMobile : heroPoster;
+
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    if (active) {
+      const p = v.play();
+      if (p) p.catch(() => {});
+    } else {
+      v.pause();
+    }
+  }, [active]);
+
+  return (
+    <video
+      ref={ref}
+      className={`hero-video absolute inset-0 h-full w-full object-cover object-[50%_45%] ${playing ? "is-playing" : ""}`}
+      muted
+      loop
+      autoPlay
+      playsInline
+      preload="auto"
+      poster={poster.src}
+      disablePictureInPicture
+      disableRemotePlayback
+      tabIndex={-1}
+      aria-hidden="true"
+      onPlaying={() => setPlaying(true)}
+    >
+      {sources.map((s) => (
+        <source key={s.src} src={s.src} type={s.type} />
+      ))}
+    </video>
+  );
+}
+
+export default function Hero({ showOpening = true }: { showOpening?: boolean }) {
   const reduced = useMediaQuery(REDUCED_QUERY);
   const isMobile = useMediaQuery(MOBILE_QUERY);
   const pageReady = useAfterLoadIdle();
   const sectionRef = useRef<HTMLElement>(null);
   const [inView, setInView] = useState(true);
 
-  // Pause the render loop whenever the hero leaves the viewport.
+  // Pause the video and the render loop whenever the hero leaves the viewport.
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -129,6 +183,7 @@ export default function Hero() {
     return () => io.disconnect();
   }, []);
 
+  const enableVideo = pageReady && !reduced && !savesData();
   const enable3D = pageReady && !reduced && !isLowPower();
 
   return (
@@ -138,16 +193,21 @@ export default function Hero() {
       aria-label="Welcome"
       className="relative flex min-h-[100svh] items-end overflow-hidden bg-charcoal"
     >
-      {/* Cinematic photograph: the crêpe on the griddle at golden hour */}
+      {/* Layer 1: poster still, then the looping video on top of it */}
       <div className="absolute inset-0">
-        <HeroPicture />
-        {/* Legibility gradients, not a flat scrim */}
+        <HeroPoster />
+        {enableVideo && <HeroVideo key={isMobile ? "portrait" : "landscape"} active={inView} isMobile={isMobile} />}
+      </div>
+
+      {/* Layer 2: dark overlay, gradients rather than a flat scrim */}
+      <div className="absolute inset-0" aria-hidden="true">
+        <div className="absolute inset-0 bg-charcoal/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/45 to-charcoal/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-transparent to-transparent" />
       </div>
 
-      {/* Gold bokeh: 3D once the page is loaded and idle, CSS shimmer before
-          and on devices that should not run it */}
+      {/* Layer 3: gold bokeh, 3D once the page is loaded and idle, CSS shimmer
+          before and on devices that should not run it */}
       <div
         className={`absolute inset-0 transition-opacity duration-1000 ${enable3D ? "opacity-100" : "opacity-0"}`}
         aria-hidden="true"
@@ -156,7 +216,21 @@ export default function Hero() {
       </div>
       {!enable3D && <div className="hero-shimmer absolute inset-0" aria-hidden="true" />}
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-6 pt-36 pb-24 sm:px-10 md:pb-28">
+      {/* Layer 4: text and calls to action */}
+      <div
+        className="relative z-10 mx-auto w-full max-w-6xl px-6 pb-24 sm:px-10 md:pb-28"
+        style={{ paddingTop: "calc(8rem + var(--announce-h, 0px))" }}
+      >
+        {showOpening && (
+          <a
+            href="#grand-opening"
+            className="opening-pill hero-rise hero-rise-1 mb-6 inline-flex max-w-full items-center gap-3 rounded-full px-4 py-2 text-[0.68rem] font-semibold tracking-[0.16em] text-gold-light uppercase transition-colors hover:text-cream sm:text-xs"
+          >
+            <span className="dot h-2 w-2 shrink-0 rounded-full bg-gold-light" aria-hidden="true" />
+            <span>{grandOpening.headline}</span>
+          </a>
+        )}
+
         <p className="eyebrow hero-rise hero-rise-1 mb-5">
           <span className="fr" lang="fr">
             Fait main à Miami

@@ -1,4 +1,4 @@
-# La Bonne Crêpe de France — Website
+# La Bonne Crêpe de France, Website
 
 Marketing site for **La Bonne Crêpe de France LLC**, Miami's first real recovery lounge: healthy French specialities and natural drinks, served at farmers markets and private events.
 
@@ -22,20 +22,38 @@ Copy `.env.example` to `.env.local`:
 | --- | --- | --- |
 | `RESEND_API_KEY` | Yes, for the contact form | API key from [resend.com](https://resend.com) |
 | `CONTACT_TO_EMAIL` | Yes, for the contact form | Inbox that receives inquiries |
+| `NEXT_PUBLIC_SITE_URL` | Yes, for the QR codes | Public base URL with no trailing slash. The `/qr` page bakes it into the printable QR codes, so set the final domain (locally and in Vercel) before printing. |
 | `RESEND_FROM_EMAIL` | Optional | Verified sender, e.g. `"La Bonne Crêpe <contact@yourdomain.com>"`. Until the domain is verified in Resend, leave unset to use Resend's onboarding sender. |
 
 Without these, the site runs fine but the form returns a friendly error pointing visitors to WhatsApp.
 
 ## Updating the menu (no code knowledge needed)
 
-Everything on the menu comes from **one file**: [`src/data/menu.ts`](src/data/menu.ts).
+Everything on the menu comes from **one file**: [`src/data/menu.ts`](src/data/menu.ts), which holds two lists: `foodMenu` and `drinkMenu`. Both are rendered in the single scrollable Menu section, food first.
 
-- Change a price: edit the `price` number.
-- Add an item: copy an existing `{ name, price, description }` line inside the right category.
-- An item without a settled price: set `price: null` and the site shows "ask".
-- Remove an item or category: delete its block.
+- Change a price: edit the `price` string, e.g. `"$12"`. Anything that is not a dollar amount (`"MP"`, `"Seasonal"`) is shown as written.
+- Add an item: copy an existing `{ name, description, price }` line inside the right category.
+- Add a category: copy a whole `{ id, title, subtitle, items }` block. Categories flow through the columns in the order listed.
+- `milkNote` is the line shown under the menu.
 
-Also replace **`public/MENU-FIN.pdf`** with the new printed menu so the "Download Menu (PDF)" button stays current.
+The designed menu boards live in `resource/menu/` (`food-menu.jpeg` and the drink menu JPEG). After replacing either, run `node scripts/optimize-cafe-assets.mjs`, which copies them to `public/assets/menu/food-menu.jpg` and `drink-menu.jpg` and makes the crisp WebP versions used by the "View food menu" and "View drink menu" lightboxes.
+
+## Printable QR codes
+
+Open `/qr` (not linked from the navigation) for two branded QR codes: one that opens the homepage and one that opens the menu section. Each card offers a 1200 px PNG and an SVG download. The codes encode `NEXT_PUBLIC_SITE_URL` at build time, so they only work once that variable holds the final live domain and the site has been redeployed.
+
+## Grand opening, memberships and other launch settings
+
+All in [`src/data/site.ts`](src/data/site.ts):
+
+- `grandOpening`: headline, date, copy for the gold announcement bar, the hero callout and the Grand Opening section. The bar and hero callout hide themselves after `showUntil`; delete the `<GrandOpening />` line in `src/app/page.tsx` when the section is no longer wanted.
+- `MEMBERSHIP_URL`: replace the `PLACEHOLDER` link with the Square membership link. Until then the Memberships button opens a WhatsApp chat instead of a dead link.
+
+## Photos and video
+
+- `node scripts/optimize-images.mjs` processes the original market photos and logos (`resource/`).
+- `node scripts/optimize-cafe-assets.mjs` processes the café photos in `resource/cafe-images/` and the drink menu image, writing WebP files to `public/assets/cafe` and the manifest `src/data/cafe-manifest.json` (alt text lives in the script). The two labeled Signature Creations images are kept at full resolution.
+- `node scripts/encode-hero-video.mjs` turns `resource/video/IMG_1429.MP4` into the muted hero loops (`public/assets/hero/hero-loop.mp4` for desktop, `hero-loop-portrait.mp4` for phones) plus the poster frames shown before playback and for reduced motion or Data Saver. It needs ffmpeg: run `npm i --no-save ffmpeg-static` once (kept out of `package.json` so deploys never download a binary), or set `FFMPEG_PATH`.
 
 Note: the printed PDF has no crêpes list, so the Crêpes category currently contains signature items with `price: null` as clearly marked placeholders. Fill in the real list and prices in `src/data/menu.ts` when ready.
 

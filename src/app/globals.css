@@ -29,6 +29,14 @@
 
 html {
   scroll-behavior: smooth;
+  /* Height of the grand opening bar; set to 0 by the bar when dismissed. */
+  --announce-h: 2.5rem;
+  --header-h: 72px;
+}
+
+/* Anchor targets clear the fixed header and the announcement bar. */
+.section-anchor {
+  scroll-margin-top: calc(var(--header-h) + var(--announce-h) + 0.5rem);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -215,5 +223,63 @@ body {
   .hero-shimmer {
     animation: none;
     background-position: 50% 0;
+  }
+}
+
+/* Grand opening announcement bar: brushed gold with a slow sheen. */
+.announce-bar {
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.28) 50%, transparent 100%) 0 0 / 220% 100%,
+    linear-gradient(90deg, #a07c2c 0%, #c9a34e 38%, #e4cd8e 52%, #c9a34e 66%, #a07c2c 100%);
+  animation: announceSheen 7s ease-in-out infinite;
+}
+
+@keyframes announceSheen {
+  0% {
+    background-position: 120% 0, 0 0;
+  }
+  100% {
+    background-position: -120% 0, 0 0;
+  }
+}
+
+/* Gold pill used for the hero callout. */
+.opening-pill {
+  background: linear-gradient(90deg, rgba(201, 163, 78, 0.22), rgba(228, 205, 142, 0.14));
+  border: 1px solid rgba(228, 205, 142, 0.55);
+  box-shadow: 0 0 0 1px rgba(201, 163, 78, 0.12), 0 8px 30px rgba(201, 163, 78, 0.18);
+  backdrop-filter: blur(6px);
+}
+
+.opening-pill .dot {
+  animation: openingPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes openingPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.6);
+    opacity: 0.5;
+  }
+}
+
+/* Hero video fades in over the poster once it can play. */
+.hero-video {
+  opacity: 0;
+  transition: opacity 1.2s ease-out;
+}
+
+.hero-video.is-playing {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announce-bar,
+  .opening-pill .dot {
+    animation: none;
   }
 }

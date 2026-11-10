@@ -1,0 +1,106 @@
+{
+  "photos": {
+    "signature-strawberry-biscoff-latte": {
+      "src": "/assets/cafe/signature-strawberry-biscoff-latte.webp",
+      "width": 1216,
+      "height": 1293,
+      "category": "signature",
+      "alt": "Strawberry Biscoff Latte, deconstructed layer by layer: strawberry purée, milk, espresso, ice, Biscoff cream cold foam, Biscoff crumble, a Biscoff cookie, whipped cream and freeze-dried strawberries",
+      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACQBACdASoQABEAPu1iqU2ppaOiMAgBMB2JbACdMoR3AdD04tUSugm6Kk5KQQAA9rkp+rVuU8Y7QIxYu99U0iObJ4KGeWBsXqBP5fmMT/lPV/NfQI9gwYkGZrnBRL7yIM9tpJa+8cHcKxsZNdDhWXru5jZz1Pttkugp5e+Rod3Ahj5DvTX9LDEmzN8IFWHWOnwAAA=="
+    },
+    "signature-gravlax-bagel": {
+      "src": "/assets/cafe/signature-gravlax-bagel.webp",
+      "width": 1121,
+      "height": 1403,
+      "category": "signature",
+      "alt": "Gravlax bagel, deconstructed layer by layer: toasted multigrain bagel, herbed cream cheese, salmon gravlax, red onion and cucumber, in the café dining room",
+      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAACQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoMYJn/FsxmPl1FvT3Y++gAA/NDPyhlJ4LvswZ/na88iJdtG3iAMU5pXY3X4zpJJUm0m6159CvCfVieECVdavmd3m6S+xZYcRaf+nwtglkeUiXkal3nE5mYkcZg74NPP8MONvOfetK7umyLljN5eDkJk3TkX9xaAFWIkE7D6gcegEUmtX5TsAA=="
+    },
+    "croque-monsieur": {
+      "src": "/assets/cafe/croque-monsieur.webp",
+      "width": 1254,
+      "height": 1254,
+      "category": "plates",
+      "alt": "Croque monsieur with bubbling golden cheese and a side salad on a café terrace table",
+      "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAwAgCdASoQABAAA4BaJbACdAYtBUMsOun/bAD+ztyiSAHWA+E96Q/NcypR88ft3PHqwzjz9kc4BGFQwQnmf7i+T+43KjeP+a9mp3drNFmgZAUrcDuHiJhv1URIHWZe/S/sv+8Ts0DwUzcIoDy2OHbWkGPVfNO2UTFPjL56AAA="
+    },
+    "salade-nicoise": {
+      "src": "/assets/cafe/salade-nicoise.webp",
+      "width": 1254,
+      "height": 1254,
+      "category": "plates",
+      "alt": "Salade niçoise with tuna, soft eggs, olives, green beans and anchovies on a café terrace table",
+      "blurDataURL": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABQAgCdASoQABAAA4BaJbACdAYtVUItSazosAAA/s7cokgjUdvjrHie8GgAM22l+TCCxv6hDoj6Jo2LPNhLL8rI89TdRSmI9qUOS3QD31MJCHrrqsRX+XvP3papskqZ9xtK1Mj6vCym2QMkIDICC2upPrnI+GPHfSr4cfoCCJAAAA=="
+    },
+    "drinks-lineup": {
+      "src": "/assets/cafe/drinks-lineup.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "drinks",
+      "alt": "Four gourmet iced creations topped with whipped cream: blue spirulina and strawberry, caramel Biscoff, ube, and a rose petal latte, in La Bonne Crêpe cups",
+      "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAABQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JbACdMoAluw7mA//fGj72B/cAAP4zgMRonWlaUqaj68j0JthMQt4abYIcCtHLAWpb0MbNK7nhrBJKYiaktYsb6XujAOv99UI+9YcYlW7uO3qpX3ZODdiuJBHIUG7trHgdPwUxKJz5YF0wc3cGCEieQpi/bM8h9WpfZuv0cu+peIlawUAb0JQ/N8kgAA=="
+    },
+    "interior-1": {
+      "src": "/assets/cafe/interior-1.webp",
+      "width": 1536,
+      "height": 1024,
+      "category": "cafe",
+      "alt": "The wooden counter set with plates and table lamps, looking out to the palm trees through the front windows",
+      "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwAgCdASoQAAsAA4BaJbACdAYv1lGSXMqm5AD75KFWwRUTeSM/UL0VtT+i7vO6mQOL8I79fmK6E7+oGnbeqoMSHNW8/RtLwNk0TLbps1JvA/Uc0Cr0cxTWGDHyEW5R4fYbyThOu8fn1YT31xNYiob5P6hfecQAAAA="
+    },
+    "interior-2": {
+      "src": "/assets/cafe/interior-2.webp",
+      "width": 1536,
+      "height": 1024,
+      "category": "cafe",
+      "alt": "The bar counter with three place settings under a canopy of white blossoms, coffee machines and marble walls behind",
+      "blurDataURL": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQAgCdASoQAAsAA4BaJYgCdAEJ3G7+eaAAAP7muEYsaYzQXEqoud1Mnl2mCU4Ks6tv8pFR+88cFA+Ryo7+6ldgWnUAvuqQMCWocqoaDzo+piHP2zNMPkSjjXAAAA=="
+    },
+    "interior-3": {
+      "src": "/assets/cafe/interior-3.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "cafe",
+      "alt": "A black table with green leather chairs, a linen runner, a fern and a brass lamp beside the window",
+      "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYgC7B3gAavlj0F7oPwpwQAD+AZ5UmEyHTk80kSWwsC/h3x5vmdBArLgFeXEVbJ8P0HU1eG5rjNWVqPSgX9P/jNKhI2GX7LiK/h09RzSv8YavLBa5h79KrZaCjXjJ5byvuVHHHn1KxKmN4Z75rGMF0/AGcf9T4f4qVvoAAAA="
+    },
+    "interior-4": {
+      "src": "/assets/cafe/interior-4.webp",
+      "width": 1086,
+      "height": 1448,
+      "category": "cafe",
+      "alt": "The storefront window with the La Bonne Crêpe logo, palm trees reflected, and two wooden tables set outside",
+      "blurDataURL": "data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAACwBACdASoQABUAPu1iqU2ppaOiMAgBMB2JZAC09iKyPAE647vv26jc9dXJvK9QAPaJcmNtxzTy78mtK9VPneXfSyg4/gz1wlSUK9EKKiXtdK0Cih+G9KOgeFy7af9WA9DQ8bphzFmLryYxQfDxSD9AM2gI4vcPKjtzhIrccteU2C7GOLHXCqvHnfWH9lOR+eVMfrfpCybkDIOhgrKgxr7xyBmtrtqMVCEi13iDK+vNXwAA"
+    },
+    "owner-at-counter": {
+      "src": "/assets/cafe/owner-at-counter.webp",
+      "width": 1136,
+      "height": 1385,
+      "category": "behind",
+      "alt": "Romain turning a crêpe on the griddle at a Miami market, and finishing a strawberry matcha creation with a Biscoff cookie",
+      "blurDataURL": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAACwBACdASoQABMAPu1iqU2ppaOiMAgBMB2JbACdMoAvQTP4tzAXcKs0GpAZChkYAPj9IACd0xcZAvL89LvE0bAqz3h3xwr2v4qj70kosWsVbnoEp2pt5H14wFEzXAXIEeHNnCLfR0xMjEQGWCLlahIWygs7hOwpQdaOsC0LCZh4VnkvS8Prvayan1PPd/eD2vxUYSal/w2HVese8tmreefVWD19RSzUjKBHn/wijc514WO0FZuopqzogAA="
+    },
+    "loyalty-card": {
+      "src": "/assets/cafe/loyalty-card.webp",
+      "width": 1076,
+      "height": 1462,
+      "category": "loyalty",
+      "alt": "Ask for your loyalty card: a team member holds up the stamp card, with each visit stamped and the tenth visit rewarded with any product on the menu",
+      "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADwAwCdASoQABYAPu1iqU2ppaOiMAgBMB2JaACdMoADKejqEeOsz5TgAP7dzVnZShhzhUBmfbTsgG/fjK0icnizu9Hr9N5ucWf1jqvInUuNJbd5Ls4kgKktJj25uHJdwzS/D485Se+Zsh8bYCLGtSDoSQE6coHaCFSLKS9VPizHli2po/2VUtdHUgyqp7+dgVSR6XgA"
+    }
+  },
+  "foodMenu": {
+    "src": "/assets/menu/food-menu.webp",
+    "original": "/assets/menu/food-menu.jpg",
+    "width": 1536,
+    "height": 1024,
+    "blurDataURL": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAADwAQCdASoQAAsAA4BaJQBdgB4anFEdI5gA/vPkpSK5jo6jUkqiNufhYqMHrn40aKRpeXha+5MxH7bvCo0tDPQAAAA="
+  },
+  "drinkMenu": {
+    "src": "/assets/menu/drink-menu.webp",
+    "original": "/assets/menu/drink-menu.jpg",
+    "width": 1536,
+    "height": 1024,
+    "blurDataURL": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADwAQCdASoQAAsAA4BaJQBdgB4US10eEgAA/vPknTJ1VFUABxXKX4qSiVC91Vlzln+R9zRV8d6J52569ii5CK7QSRlv1etmfYAAAA=="
+  }
+}

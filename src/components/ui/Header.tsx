@@ -36,7 +36,8 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
+        style={{ top: "var(--announce-h, 0px)" }}
+        className={`fixed inset-x-0 z-40 transition-all duration-500 ${
           solid
             ? "bg-marble/92 shadow-[0_1px_0_rgba(160,124,44,0.18),0_8px_30px_rgba(26,26,26,0.06)] backdrop-blur-md"
             : "bg-transparent"
@@ -74,7 +75,7 @@ export default function Header() {
             </span>
           </Link>
 
-          <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-6 md:flex lg:gap-8">
             {nav.map((item) => (
               <a
                 key={item.href}

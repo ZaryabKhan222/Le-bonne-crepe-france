@@ -65,7 +65,7 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="bg-marble-texture scroll-mt-20 px-6 py-24 pb-32 md:py-36 md:pb-36"
+      className="bg-marble-texture section-anchor px-6 py-24 pb-32 md:py-36 md:pb-36"
     >
       <div className="mx-auto grid max-w-6xl gap-14 md:grid-cols-[1fr_1.3fr] md:gap-20">
         {/* Direct options */}

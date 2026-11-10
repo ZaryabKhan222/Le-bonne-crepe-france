@@ -34,7 +34,7 @@ export default function Catering() {
     <section
       id="catering"
       aria-labelledby="catering-heading"
-      className="bg-charcoal-texture scroll-mt-20 px-6 py-24 md:py-36"
+      className="bg-charcoal-texture section-anchor px-6 py-24 md:py-36"
     >
       <div className="mx-auto max-w-6xl">
         <div className="grid items-start gap-12 md:grid-cols-2 md:gap-16">

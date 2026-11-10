@@ -6,15 +6,20 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import GoldRule from "@/components/ui/GoldRule";
 import Reveal from "@/components/ui/Reveal";
 import Lightbox from "@/components/ui/Lightbox";
-import { galleryPhotos } from "@/data/images";
+import { galleryPhotos, type PhotoCategory } from "@/data/images";
 
-const filters = [
+const filters: { id: "all" | PhotoCategory; label: string }[] = [
   { id: "all", label: "All" },
+  { id: "cafe", label: "The Café" },
+  { id: "plates", label: "Plates" },
   { id: "crepes", label: "Crêpes" },
   { id: "waffles", label: "Waffles" },
   { id: "drinks", label: "Drinks" },
   { id: "behind", label: "Behind the Scenes" },
-] as const;
+];
+
+/** The drinks lineup anchors the grid at double size. */
+const FEATURED = "drinks-lineup";
 
 export default function Gallery() {
   const [filter, setFilter] = useState<(typeof filters)[number]["id"]>("all");
@@ -26,7 +31,7 @@ export default function Gallery() {
     <section
       id="gallery"
       aria-labelledby="gallery-heading"
-      className="bg-marble-texture scroll-mt-20 px-6 py-24 md:py-36"
+      className="bg-marble-texture section-anchor px-6 py-24 md:py-36"
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 max-w-xl">
@@ -35,7 +40,7 @@ export default function Gallery() {
             id="gallery-heading"
             className="font-display text-4xl leading-tight font-medium tracking-tight text-charcoal md:text-5xl"
           >
-            Plates worth the market queue
+            The café, the counter, the plates
           </h2>
           <GoldRule className="mt-6 max-w-24" />
         </div>
@@ -45,7 +50,10 @@ export default function Gallery() {
             <button
               key={f.id}
               type="button"
-              onClick={() => setFilter(f.id)}
+              onClick={() => {
+                setFilter(f.id);
+                setLightboxIndex(null);
+              }}
               aria-pressed={filter === f.id}
               className={`rounded-full border px-4 py-1.5 text-sm font-medium transition-colors duration-300 ${
                 filter === f.id
@@ -58,29 +66,44 @@ export default function Gallery() {
           ))}
         </div>
 
-        <ul className="columns-2 gap-4 lg:columns-3">
-          {visible.map((p, i) => (
-            <Reveal as="li" key={p.id} delay={Math.min(i * 0.05, 0.3)} className="mb-4 break-inside-avoid">
-              <button
-                type="button"
-                onClick={() => setLightboxIndex(i)}
-                aria-label={`View larger: ${p.alt}`}
-                className="group block w-full overflow-hidden rounded-lg"
+        <ul className="grid grid-flow-dense grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+          {visible.map((p, i) => {
+            const featured = p.id === FEATURED;
+            return (
+              <Reveal
+                as="li"
+                key={p.id}
+                delay={Math.min((i % 8) * 0.06, 0.4)}
+                className={featured ? "col-span-2 row-span-2" : ""}
               >
-                <Image
-                  src={p.src}
-                  alt={p.alt}
-                  width={p.width}
-                  height={p.height}
-                  sizes="(max-width: 768px) 46vw, 30vw"
-                  placeholder="blur"
-                  blurDataURL={p.blurDataURL}
-                  loading="lazy"
-                  className="w-full transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                />
-              </button>
-            </Reveal>
-          ))}
+                <button
+                  type="button"
+                  onClick={() => setLightboxIndex(i)}
+                  aria-label={`View larger: ${p.alt}`}
+                  className="group relative block aspect-square w-full overflow-hidden rounded-lg bg-marble-grey"
+                >
+                  <Image
+                    src={p.src}
+                    alt={p.alt}
+                    fill
+                    sizes={
+                      featured
+                        ? "(max-width: 768px) 100vw, 50vw"
+                        : "(max-width: 768px) 50vw, 25vw"
+                    }
+                    placeholder="blur"
+                    blurDataURL={p.blurDataURL}
+                    loading="lazy"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                  />
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-gradient-to-t from-charcoal/35 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  />
+                </button>
+              </Reveal>
+            );
+          })}
         </ul>
       </div>
 

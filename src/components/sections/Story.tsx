@@ -41,7 +41,7 @@ export default function Story() {
       ref={scope}
       id="story"
       aria-labelledby="story-heading"
-      className="scroll-mt-20 bg-cream px-6 py-24 md:py-36"
+      className="section-anchor bg-cream px-6 py-24 md:py-36"
     >
       <div className="mx-auto grid max-w-6xl items-center gap-12 md:grid-cols-2 md:gap-20">
         {/* Portrait column */}
